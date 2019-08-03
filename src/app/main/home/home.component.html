@@ -1,0 +1,38 @@
+<div id="home" class="page-layout simple right-sidebar" fxLayout="row">
+    <div class="center" fusePerfectScrollbar>
+        <app-header [leftTitle]="'Cloud Costa Rica'" [rightTitle]="'Software Engineering'"></app-header>
+        <div class="content">
+            <!-- BEGIN TABS-->
+            <mat-tab-group dynamicHeight>
+
+                <mat-tab label="Projects Status">
+                    <app-project-status></app-project-status>
+                </mat-tab>
+
+                <!-- PROJECT OVERVIEW-->
+                <mat-tab label="Highlights">
+                    <app-highlights></app-highlights>
+                </mat-tab>
+
+                <!-- PROJECT OVERVIEW-->
+                <mat-tab label="Lowlights/Risks">
+                    <app-lowlights></app-lowlights>
+                </mat-tab>
+
+                <!-- PROJECT OVERVIEW-->
+                <mat-tab label="Team Management">
+                    <app-tms></app-tms>
+                </mat-tab>
+
+                <!-- PROJECT OVERVIEW-->
+                <mat-tab label="Help Needed">
+                    <app-help-needed></app-help-needed>
+                </mat-tab>
+
+            </mat-tab-group>
+            <!-- END TABS -->
+        </div>
+
+    </div>
+</div>
+

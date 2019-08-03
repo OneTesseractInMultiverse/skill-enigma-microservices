@@ -1,0 +1,81 @@
+<!-- List of Projects -->
+<fuse-widget class="widget" fxLayout="row"
+             fxFlex="1 0 100%">
+    <!-- Front -->
+    <div class="fuse-widget-front">
+        <div class="p-24 border-bottom" fxLayout="row"
+             fxLayoutAlign="space-between center">
+            <div class="h2">{{title}}</div>
+            <div class="text-boxed accent m-0">
+                {{items.length}}
+                items
+            </div>
+        </div>
+        <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!-- STATUS COLUMN-->
+            <ng-container matColumnDef="status">
+                <mat-header-cell fxFlex="96px" *matHeaderCellDef>Status</mat-header-cell>
+                <mat-cell fxFlex="96px" *matCellDef="let item">
+                    <div *ngIf="item.status == 'R'">
+                        <span class="semaphore-danger">
+                            <mat-icon aria-hidden="false" aria-label="danger">error</mat-icon>
+                        </span>
+                    </div>
+                    <div *ngIf="item.status == 'G'">
+                        <span class="semaphore-good">
+                            <mat-icon aria-hidden="false" aria-label="good">check</mat-icon>
+                        </span>
+                    </div>
+                    <div *ngIf="item.status == 'Y'">
+                        <span class="semaphore-warning">
+                            <mat-icon aria-hidden="false" aria-label="warning">warning</mat-icon>
+                        </span>
+                    </div>
+                </mat-cell>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="title">
+                <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+                <mat-cell *matCellDef="let item">
+                    <p class="text-truncate font-weight-800">
+                        {{item.title}}</p>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="owner">
+                <mat-header-cell *matHeaderCellDef>Owner</mat-header-cell>
+                <mat-cell *matCellDef="let item">
+                    <p class="text-truncate font-weight-800">
+                        {{item.owner}}</p>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="eta">
+                <mat-header-cell *matHeaderCellDef>ETA</mat-header-cell>
+                <mat-cell *matCellDef="let item">
+                    <p class="text-truncate font-weight-600">
+                        {{item.eta}}
+                    </p>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="comment">
+                <mat-header-cell *matHeaderCellDef>Comments</mat-header-cell>
+                <mat-cell *matCellDef="let item">
+                    <p class="text-truncate font-weight-600">
+                        {{item.comment}}
+                    </p>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+
+    </div>
+    <!-- / Front -->
+</fuse-widget>
+<!-- / WIDGET 1 -->

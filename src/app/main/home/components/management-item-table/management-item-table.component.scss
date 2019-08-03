@@ -1,0 +1,66 @@
+.widget {
+
+    &.widget5 {
+
+        .gridline-path.gridline-path-horizontal {
+            display: none;
+        }
+    }
+}
+
+.semaphore-danger {
+    display: block;
+    text-align: center;
+    background-color: red;
+    color: whitesmoke;
+    padding: 10px;
+    font-weight: 900;
+    width: 90px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.semaphore-warning {
+    display: block;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    font-weight: 900;
+    width: 90px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.semaphore-good {
+    display: block;
+    text-align: center;
+    background-color: green;
+    color: whitesmoke;
+    padding: 10px;
+    font-weight: 900;
+    width: 90px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+table {
+    width: 800px;
+}
+
+td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+}
+
+th.mat-column-position, td.mat-column-position {
+    padding-left: 8px;
+}
+
+.mat-table-sticky:first-child {
+    border-right: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky:last-child {
+    border-left: 1px solid #e0e0e0;
+}
