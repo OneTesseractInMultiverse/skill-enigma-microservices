@@ -13,7 +13,7 @@
         .profile-image {
             margin-right: 24px;
 
-            @include media-breakpoint('sm') {
+            @include media-breakpoint('lt-md') {
                 margin: 0 0 16px 0;
             }
         }
@@ -21,15 +21,12 @@
         .name {
             font-size: 34px;
             color: #FFFFFF;
-
-            @include media-breakpoint('sm') {
-                margin-bottom: 32px;
-            }
         }
 
         .username {
             color: #E0F7FA;
         }
+
     } //  HEADER ENDS
 
 }  // PROFILE ENDS

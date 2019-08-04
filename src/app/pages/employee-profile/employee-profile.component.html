@@ -12,12 +12,21 @@
             <img class="profile-image avatar huge" src="assets/images/avatars/Velazquez.jpg"
                  [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
 
-            <!-- NAME -->
-            <div class="name" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
-                Charlie Adams
-            </div>
+            <!-- NAMES WRAPPER -->
+            <div fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="center start">
 
-            <div class="mat-title username" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">@CAdams</div>
+                <!-- NAME -->
+                <div class="name" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Charlie Adams
+                </div>
+
+                <!-- USERNAME -->
+                <div class="mat-title username" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    @CAdams
+                </div>
+
+            </div>
+            <!-- NAME WRAPPER ENDS -->
 
         </div>
 
