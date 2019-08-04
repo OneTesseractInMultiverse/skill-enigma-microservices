@@ -18,9 +18,7 @@ const ROUTES: Routes = [
         //  CORE MODULES
         CommonModule,
         //  INIT THE ROUTES
-        RouterModule.forChild(ROUTES),
-        //  FUSE MODULE
-        FuseSharedModule
+        RouterModule.forChild(ROUTES)
     ]
 })
 
