@@ -36,11 +36,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
     imports: [
+        CommonModule,
         MatAutocompleteModule,
         MatBadgeModule,
         MatBottomSheetModule,
@@ -115,7 +115,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         MatToolbarModule,
         MatTooltipModule,
         MatTreeModule,
-        BrowserAnimationsModule
     ]
 })
 export class MaterialModule { }
