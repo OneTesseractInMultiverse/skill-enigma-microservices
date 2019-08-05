@@ -4,6 +4,7 @@ import {EmployeeProfileRoutingModule} from './employee-profile-routing.module';
 import {EmployeeProfileComponent} from './employee-profile.component';
 import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 @NgModule({
     declarations: [EmployeeProfileComponent],
@@ -14,8 +15,9 @@ import {MaterialModule} from '../../modules/material/material.module';
         EmployeeProfileRoutingModule,
         //  FUSE MODULE
         FuseSharedModule,
-        //  MATERIAL MODULE
-        MaterialModule
+        // EXTERNAL LIBRARIES MODULE
+        MaterialModule,
+        NgxChartsModule
     ]
 })
 export class EmployeeProfileModule {
