@@ -22,7 +22,7 @@ export class EmployeeProfileComponent implements OnInit {
     xAxisLabel = 'Months';
     showYAxisLabel = true;
     yAxisLabel = 'Skills';
-
+    
 
     multi = [
         {
