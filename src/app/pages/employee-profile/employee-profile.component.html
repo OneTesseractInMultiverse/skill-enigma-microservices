@@ -44,18 +44,26 @@
     </div>
     <!-- / HEADER -->
 
-    <ngx-charts-line-chart
-        [results]="multi"
-        [view]="[1300, 400]"
-        [gradient]="gradient"
-        [xAxis]="showXAxis"
-        [yAxis]="showYAxis"
-        [legend]="showLegend"
-        [showXAxisLabel]="showXAxisLabel"
-        [showYAxisLabel]="showYAxisLabel"
-        [xAxisLabel]="xAxisLabel"
-        [yAxisLabel]="yAxisLabel">
-    </ngx-charts-line-chart>
+    <div class="fuse-card">
+
+        <div class="p-16">
+            <h1>Skills per month</h1>
+        </div>
+
+        <ngx-charts-line-chart
+            [results]="multi"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"x
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+        </ngx-charts-line-chart>
+    </div>
+
+
 
 </div>
 <!-- PAGE ENDS -->
