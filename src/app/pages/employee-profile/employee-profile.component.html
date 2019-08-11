@@ -89,7 +89,7 @@
 
                     <div class="p-12">
 
-                        <div class="fuse-card auto-width p-12">
+                        <div class="fuse-card auto-width mat-elevation-z3 p-12">
                             <span class="mat-title">Technologies</span>
 
                             <!-- SKILLS PANELS -->
@@ -97,18 +97,60 @@
 
                                 <mat-expansion-panel class="w-400">
                                     <mat-expansion-panel-header>
-                                        <mat-panel-title>
+
+                                        <mat-panel-title fxLayout fxLayoutAlign="start center">
                                             Angular
+                                            <mat-chip-list class="ml-12">
+                                                <mat-chip>40%</mat-chip>
+                                            </mat-chip-list>
+
                                         </mat-panel-title>
+
                                     </mat-expansion-panel-header>
 
-                                    <mat-form-field>
-                                        <input matInput placeholder="First name">
-                                    </mat-form-field>
+                                    <!-- EXPANSION PANEL CONTENT -->
+                                    <div class="expansion-panel-content">
 
-                                    <mat-form-field>
-                                        <input matInput placeholder="Age">
-                                    </mat-form-field>
+                                        <!-- SKILL COMPONENT ROW -->
+                                        <div fxLayout="row" fxLayoutAlign="center center" class="skill-component">
+
+                                            <span class="mat-body-2" fxFlex="1 0 0">HTML 5</span>
+
+                                            <div fxFlex="1 0 0" fxLayoutAlign="center center" fxLayoutGap="6px">
+                                                <mat-progress-bar fxFlex="1 0 0" mode="determinate" value="40"></mat-progress-bar>
+                                                <span class="mat-caption">40%</span>
+                                            </div>
+
+
+                                        </div>
+
+                                        <!-- SKILL COMPONENT ROW -->
+                                        <div fxLayout="row" fxLayoutAlign="center center" class="skill-component">
+
+                                            <span class="mat-body-2" fxFlex="1 0 0">ASYNCHRONOUS JAVASCRIPT</span>
+
+                                            <div fxFlex="1 0 0" fxLayoutAlign="center center" fxLayoutGap="6px">
+                                                <mat-progress-bar fxFlex="1 0 0" mode="determinate" value="40"></mat-progress-bar>
+                                                <span class="mat-caption">40%</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- SKILL COMPONENT ROW -->
+                                        <div fxLayout="row" fxLayoutAlign="center center" class="skill-component">
+
+                                            <span class="mat-body-2" fxFlex="1 0 0">CSS</span>
+
+                                            <div fxFlex="1 0 0" fxLayoutAlign="center center" fxLayoutGap="6px">
+                                                <mat-progress-bar fxFlex="1 0 0" mode="determinate" value="40"></mat-progress-bar>
+                                                <span class="mat-caption">40%</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- EXPANSION PANEL ENDS -->
+
                                 </mat-expansion-panel>
 
                             </div>
