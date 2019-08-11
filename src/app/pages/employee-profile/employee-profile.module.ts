@@ -5,7 +5,6 @@ import {EmployeeProfileComponent} from './employee-profile.component';
 import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
-import {FuseWidgetModule} from '../../../@fuse/components';
 
 @NgModule({
     declarations: [EmployeeProfileComponent],

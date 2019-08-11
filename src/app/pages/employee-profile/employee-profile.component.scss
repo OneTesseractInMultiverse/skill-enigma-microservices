@@ -58,9 +58,34 @@
     // CONTENT
     .content {
         width: 100%;
-        padding: 12px;
+        padding: 24px;
 
-    } // CONTENT ENDS
+
+        .skills {
+            overflow: hidden;
+        }
+
+    }
+    // CONTENT ENDS
 
 }
+
 // PROFILE ENDS
+
+
+// ------------------------------------------------------------------------------------
+// MATERIAL COMPONENT CUSTOMIZE
+
+// ------------------------------------
+// MAT-TAB
+// ------------------------------------
+.mat-tab-labels {
+    background-color: #2e3440;
+}
+
+.mat-ink-bar {
+    background-color: #81d4fa !important;
+}
+
+
+// ------------------------------------

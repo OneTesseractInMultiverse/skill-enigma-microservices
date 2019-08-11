@@ -47,7 +47,7 @@
     <!-- CONTENT -->
     <div class="content">
 
-        <div [@animate]="{value:'*',params:{y:'100%'}}" class="fuse-card auto-width chart-card m-12">
+        <div [@animate]="{value:'*',params:{y:'100%'}}" class="fuse-card auto-width chart-card">
 
             <div class="p-16 border-bottom">
                 <div class="h1">Skills Over Time</div>
@@ -57,11 +57,11 @@
             <div class="p-12">
 
                 <!-- SKILL OVER TIME CHART -->
-                <div class="h-360">
+                <div class="h-320">
                     <ngx-charts-line-chart
                         [results]="multi"
                         [gradient]="gradient"
-                        [xAxis]="showXAxis" x
+                        [xAxis]="showXAxis"
                         [yAxis]="showYAxis"
                         [legend]="showLegend"
                         [showYAxisLabel]="showYAxisLabel"
@@ -74,6 +74,28 @@
             </div>
             <!-- CARD CONTENT -->
 
+        </div>
+
+        <mat-divider class="my-20"></mat-divider>
+
+        <span class="mat-display-1 ml-12">Skills</span>
+
+        <div class="skills fuse-card auto-width mt-8">
+            <mat-tab-group backgroundColor="primary">
+                <mat-tab label="First">
+
+                    <p>ksks</p>
+                    <p>jsjs</p>
+
+                </mat-tab>
+                <mat-tab label="Second">
+
+                    <p>ksks</p>
+                    <p>jsjs</p>
+
+                </mat-tab>
+
+            </mat-tab-group>
         </div>
 
     </div>
