@@ -69,17 +69,17 @@
                 color: #44c1fa;
             }
 
-            .expansion-panel-content {
-                color: white;
+            .skill-card {
+                max-width: 500px;
+                min-width: 300px;
+                margin-bottom: 10px;
 
-                .skill-component {
-                    margin: 10px 0 10px;
+                .expansion-panel-content {
+                    color: white;
 
-                    .progress-bar-number-indicator {
-                        color: #4CAF50;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
+                    .skill-component {
+                        margin: 10px 0 10px;
+
                     }
 
                 }
