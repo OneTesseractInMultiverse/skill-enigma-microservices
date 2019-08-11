@@ -42,28 +42,42 @@
         </div>
 
     </div>
-    <!-- / HEADER -->
+    <!-- HEADER END -->
 
-    <div class="fuse-card">
+    <!-- CONTENT -->
+    <div class="content">
 
-        <div class="p-16">
-            <h1>Skills per month</h1>
+        <div [@animate]="{value:'*',params:{y:'100%'}}" class="fuse-card auto-width chart-card m-12">
+
+            <div class="p-16 border-bottom">
+                <div class="h1">Skills Over Time</div>
+            </div>
+
+            <!-- CARD CONTENT -->
+            <div class="p-12">
+
+                <!-- SKILL OVER TIME CHART -->
+                <div class="h-360">
+                    <ngx-charts-line-chart
+                        [results]="multi"
+                        [gradient]="gradient"
+                        [xAxis]="showXAxis" x
+                        [yAxis]="showYAxis"
+                        [legend]="showLegend"
+                        [showYAxisLabel]="showYAxisLabel"
+                        [xAxisLabel]="xAxisLabel"
+                        [yAxisLabel]="yAxisLabel">
+                    </ngx-charts-line-chart>
+                </div>
+                <!--  CHART END -->
+
+            </div>
+            <!-- CARD CONTENT -->
+
         </div>
 
-        <ngx-charts-line-chart
-            [results]="multi"
-            [gradient]="gradient"
-            [xAxis]="showXAxis"x
-            [yAxis]="showYAxis"
-            [legend]="showLegend"
-            [showXAxisLabel]="showXAxisLabel"
-            [showYAxisLabel]="showYAxisLabel"
-            [xAxisLabel]="xAxisLabel"
-            [yAxisLabel]="yAxisLabel">
-        </ngx-charts-line-chart>
     </div>
-
-
+    <!-- CONTENT END -->
 
 </div>
 <!-- PAGE ENDS -->
