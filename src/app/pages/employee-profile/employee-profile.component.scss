@@ -53,6 +53,7 @@
         }
 
     }
+
     //  HEADER ENDS
 
     // CONTENT
@@ -71,6 +72,7 @@
         }
 
     }
+
     // CONTENT ENDS
 
 }
@@ -92,5 +94,17 @@
     background-color: #81d4fa !important;
 }
 
-
 // ------------------------------------
+// MAT-EXPANSION-PANEL
+// ------------------------------------
+.mat-expansion-panel {
+    background-color: #2e3440 !important;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-indicator {
+    color: white !important;
+}
+
+.mat-expansion-indicator::after {
+    color: white !important;
+}
