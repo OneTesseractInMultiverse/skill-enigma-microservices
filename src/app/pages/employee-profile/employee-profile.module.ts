@@ -16,7 +16,6 @@ import {FuseWidgetModule} from '../../../@fuse/components';
         EmployeeProfileRoutingModule,
         //  FUSE MODULE
         FuseSharedModule,
-        FuseWidgetModule,
         // EXTERNAL LIBRARIES MODULE
         MaterialModule,
         NgxChartsModule
