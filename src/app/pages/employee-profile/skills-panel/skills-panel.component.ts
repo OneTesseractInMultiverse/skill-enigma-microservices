@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {fuseAnimations} from '../../../../@fuse/animations';
 
 @Component({
@@ -8,12 +8,6 @@ import {fuseAnimations} from '../../../../@fuse/animations';
     encapsulation: ViewEncapsulation.None,
     animations: fuseAnimations
 })
-export class SkillsPanelComponent implements OnInit {
 
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
-
+export class SkillsPanelComponent {
 } // COMPONENT END
