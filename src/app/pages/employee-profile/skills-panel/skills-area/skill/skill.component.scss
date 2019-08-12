@@ -1,0 +1,39 @@
+// VARIABLES
+$IBM-blue-60: #0062ff;
+$shark-color: #2e3440;
+
+// ---------------------------------------------
+// UTILITIES CLASSES
+// ---------------------------------------------
+.white-font {
+    color: #FFFFFF;
+}
+
+// ---------------------------------------------
+// ELEMENT CLASSES
+// ---------------------------------------------
+
+.skill-card {
+    max-width: 500px;
+    min-width: 300px;
+    margin-bottom: 10px;
+}
+
+
+// ----------------------------------------------
+// MATERIAL COMPONENT CUSTOMIZE
+// ----------------------------------------------
+
+// MAT-EXPANSION-PANEL
+// ------------------------------------
+.mat-expansion-panel, .mat-expansion-panel-header {
+    background-color: $shark-color!important;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-indicator {
+    color: white !important;
+}
+
+.mat-expansion-indicator::after {
+    color: white !important;
+}

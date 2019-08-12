@@ -8,10 +8,12 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {HeaderComponent} from './header/header.component';
 import { SkillGrowthComponent } from './skill-growth/skill-growth.component';
 import { SkillsPanelComponent } from './skills-panel/skills-panel.component';
-import { SkillsAreaComponent } from './skills-panel/skills-type-card/skills-area.component';
+import { SkillsAreaComponent } from './skills-panel/skills-area/skills-area.component';
+import { SkillComponent } from './skills-panel/skills-area/skill/skill.component';
+import { SkillComponentComponent } from './skills-panel/skills-area/skill/skill-component/skill-component.component';
 
 @NgModule({
-    declarations: [EmployeeProfileComponent, HeaderComponent, SkillGrowthComponent, SkillsPanelComponent, SkillsAreaComponent],
+    declarations: [EmployeeProfileComponent, HeaderComponent, SkillGrowthComponent, SkillsPanelComponent, SkillsAreaComponent, SkillComponent, SkillComponentComponent],
     imports: [
         //  CORE MODULES
         CommonModule,
