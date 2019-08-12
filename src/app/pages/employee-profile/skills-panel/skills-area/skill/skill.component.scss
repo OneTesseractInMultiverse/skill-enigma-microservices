@@ -1,5 +1,9 @@
+// IMPORT
+@import "../../../../../../@fuse/scss/fuse";
+
 // VARIABLES
 $IBM-blue-60: #0062ff;
+$IBM-cyan-20: #b3e6ff;
 $shark-color: #2e3440;
 
 // ---------------------------------------------
@@ -27,7 +31,7 @@ $shark-color: #2e3440;
 // MAT-EXPANSION-PANEL
 // ------------------------------------
 .mat-expansion-panel, .mat-expansion-panel-header {
-    background-color: $shark-color!important;
+    background-color: $shark-color !important;
 }
 
 .mat-expansion-panel-header-title, .mat-expansion-indicator {
@@ -36,4 +40,12 @@ $shark-color: #2e3440;
 
 .mat-expansion-indicator::after {
     color: white !important;
+}
+
+// MAT-CHIP
+// ------------------------------------
+.mat-chip.mat-standard-chip {
+    background-color: $IBM-blue-60 !important;
+    color: $IBM-cyan-20 !important;
+    font-weight: bold !important;
 }
