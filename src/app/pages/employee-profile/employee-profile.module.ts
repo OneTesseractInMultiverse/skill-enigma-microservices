@@ -6,9 +6,10 @@ import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {HeaderComponent} from './header/header.component';
+import { SkillGrowthComponent } from './skill-growth/skill-growth.component';
 
 @NgModule({
-    declarations: [EmployeeProfileComponent, HeaderComponent],
+    declarations: [EmployeeProfileComponent, HeaderComponent, SkillGrowthComponent],
     imports: [
         //  CORE MODULES
         CommonModule,

@@ -1,0 +1,34 @@
+<!-- FUSE CARD -->
+<div [@animate]="{value:'*',params:{y:'100%'}}" class="fuse-card auto-width chart-card">
+
+    <!------------------------ CARD TITLE -------------------------->
+    <div class="p-16 border-bottom">
+        <div class="h1">Skills Growth</div>
+    </div>
+    <!---------------------- CARD TITLE END ------------------------>
+
+    <!------------------------ CARD CONTENT ------------------------->
+    <div class="p-12">
+
+        <!-- CHART CONTAINER -->
+        <div class="h-320">
+
+            <!-- LINE CHART -->
+            <ngx-charts-line-chart
+                [results]="multi"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showYAxisLabel]="showYAxisLabel"
+                [yAxisLabel]="yAxisLabel">
+            </ngx-charts-line-chart>
+
+        </div>
+        <!--  CONTAINER END -->
+
+    </div>
+    <!---------------------- CARD CONTENT END ----------------------->
+
+</div>
+<!-- FUSE CARD END -->

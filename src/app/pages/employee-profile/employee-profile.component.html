@@ -6,34 +6,7 @@
     <!-- CONTENT -->
     <div class="w-100-p p-24">
 
-        <div [@animate]="{value:'*',params:{y:'100%'}}" class="fuse-card auto-width chart-card">
-
-            <div class="p-16 border-bottom">
-                <div class="h1">Skills Growth</div>
-            </div>
-
-            <!-- CARD CONTENT -->
-            <div class="p-12">
-
-                <!-- SKILL OVER TIME CHART -->
-                <div class="h-320">
-                    <ngx-charts-line-chart
-                        [results]="multi"
-                        [gradient]="gradient"
-                        [xAxis]="showXAxis"
-                        [yAxis]="showYAxis"
-                        [legend]="showLegend"
-                        [showYAxisLabel]="showYAxisLabel"
-                        [xAxisLabel]="xAxisLabel"
-                        [yAxisLabel]="yAxisLabel">
-                    </ngx-charts-line-chart>
-                </div>
-                <!--  CHART END -->
-
-            </div>
-            <!-- CARD CONTENT -->
-
-        </div>
+        <app-skill-growth></app-skill-growth>
 
         <mat-divider class="my-20"></mat-divider>
 
