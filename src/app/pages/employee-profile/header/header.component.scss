@@ -3,10 +3,19 @@
 
 // VARIABLES
 $IBM-blue-60: #0062ff;
+$IBM-cyan-20: #b3e6ff;
 
 // UTILITIES CLASSES
 .blue-font {
     color: $IBM-blue-60;
+}
+
+.cyan-font {
+    color: $IBM-cyan-20;
+}
+
+.white-font {
+    color: #FFFFFF;
 }
 
 // HEADER
@@ -38,7 +47,7 @@ $IBM-blue-60: #0062ff;
 
     .profile-name {
         font-size: 45px;
-        color: $IBM-blue-60;
+        color: #FFFFFF;
         text-align: center;
     }
 
