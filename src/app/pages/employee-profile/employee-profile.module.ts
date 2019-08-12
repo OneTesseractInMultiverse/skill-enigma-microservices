@@ -5,9 +5,10 @@ import {EmployeeProfileComponent} from './employee-profile.component';
 import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {HeaderComponent} from './header/header.component';
 
 @NgModule({
-    declarations: [EmployeeProfileComponent],
+    declarations: [EmployeeProfileComponent, HeaderComponent],
     imports: [
         //  CORE MODULES
         CommonModule,
@@ -21,4 +22,4 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     ]
 })
 export class EmployeeProfileModule {
-}
+} // MODULE END

@@ -1,0 +1,38 @@
+<!-- HEADER -->
+<div class="header" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row"
+     fxLayoutAlign.gt-sm="start center">
+
+    <!--------------------------------  PROFILE IMAGE ------------------------------->
+    <img class="profile-image avatar huge" src="assets/images/avatars/Velazquez.jpg" alt="profile-image"
+         [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+
+    <!--------------------------------- HEADER TITLE -------------------------------->
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="center start">
+
+        <!-- PROFILE NAME -->
+        <div class="profile-name" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+            Charlie Adams
+        </div>
+
+        <!-- EMPLOYEE PRIMARY ROLE -->
+        <div class="blue-font mat-title" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+            Software Developer
+        </div>
+
+    </div>
+    <!------------------------------ HEADER TITLE END ------------------------------->
+
+    <!------------------------------- CONTACT INFO ---------------------------------->
+    <div class="contact-info" fxLayout="row wrap" fxFlexAlign.gt-sm="start">
+
+        <!-- EMAIL -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="blue-font mr-4">email</mat-icon>
+            <div class="contact-item-text">cadams@email.com</div>
+        </div>
+
+    </div>
+    <!---------------------------- CONTACT INFO END --------------------------------->
+
+</div>
+<!-- HEADER END -->

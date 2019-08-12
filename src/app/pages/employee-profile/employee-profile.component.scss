@@ -3,58 +3,7 @@
 
 #profile {
 
-    // HEADER
-    .header {
-        height: 320px;
-        min-height: 320px;
-        max-height: 320px;
-        background: url('/assets/images/backgrounds/dark-material-bg.jpg') no-repeat 0 45%;
 
-        @include media-breakpoint('gt-sm') {
-            height: 200px;
-            min-height: 200px;
-            max-height: 200px;
-        }
-
-        .profile-image {
-            margin-right: 24px;
-
-            @include media-breakpoint('lt-md') {
-                margin: 0 0 16px 0;
-            }
-        }
-
-        .name {
-            font-size: 34px;
-            color: #FFFFFF;
-        }
-
-        .primary-role {
-            color: #81d4fa;
-        }
-
-        .contact {
-            margin-top: 17px;
-
-            @include media-breakpoint('gt-sm') {
-                margin: 15px 0 0 60px;
-            }
-
-            .contact-item-logo {
-                color: #81d4fa;
-                margin-right: 5px;
-            }
-
-            .contact-item-text {
-                color: #FFFFFF;
-                font-size: 18px;
-            }
-
-        }
-
-    }
-
-    //  HEADER ENDS
 
     // CONTENT
     .content {
