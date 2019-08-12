@@ -7,9 +7,10 @@ import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {HeaderComponent} from './header/header.component';
 import { SkillGrowthComponent } from './skill-growth/skill-growth.component';
+import { SkillsPanelComponent } from './skills-panel/skills-panel.component';
 
 @NgModule({
-    declarations: [EmployeeProfileComponent, HeaderComponent, SkillGrowthComponent],
+    declarations: [EmployeeProfileComponent, HeaderComponent, SkillGrowthComponent, SkillsPanelComponent],
     imports: [
         //  CORE MODULES
         CommonModule,

@@ -1,9 +1,11 @@
 import {Component} from '@angular/core';
+import {fuseAnimations} from '../../../../@fuse/animations';
 
 @Component({
     selector: 'app-skill-growth',
     templateUrl: './skill-growth.component.html',
-    styleUrls: ['./skill-growth.component.scss']
+    styleUrls: ['./skill-growth.component.scss'],
+    animations: fuseAnimations
 })
 
 export class SkillGrowthComponent {

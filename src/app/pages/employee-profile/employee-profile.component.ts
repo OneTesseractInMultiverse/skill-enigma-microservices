@@ -1,23 +1,10 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {fuseAnimations} from '../../../@fuse/animations';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-employee-profile',
     templateUrl: './employee-profile.component.html',
-    styleUrls: ['./employee-profile.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    animations: fuseAnimations
+    styleUrls: ['./employee-profile.component.scss']
 })
-export class EmployeeProfileComponent implements OnInit {
 
-    // -------------------------------------------------------------------------------
-    // COMPONENT PROPERTIES
-    // -------------------------------------------------------------------------------
-
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
-
+export class EmployeeProfileComponent {
 } // COMPONENT ENDS

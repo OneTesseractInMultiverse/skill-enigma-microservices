@@ -1,0 +1,73 @@
+// IMPORT
+@import "src/@fuse/scss/fuse";
+
+
+
+.skills {
+    overflow: hidden;
+
+    .role-title {
+        color: #44c1fa;
+    }
+
+    .skill-card {
+        max-width: 500px;
+        min-width: 300px;
+        margin-bottom: 10px;
+
+        .expansion-panel-content {
+            color: white;
+
+            .skill-component {
+                margin: 10px 0 10px;
+
+            }
+
+        }
+
+    }
+
+}
+
+
+// ------------------------------------------------------------------------------------
+// MATERIAL COMPONENT CUSTOMIZE
+
+// ------------------------------------
+// MAT-TAB
+// ------------------------------------
+.mat-tab-labels {
+    background-color: #2e3440;
+}
+
+.mat-ink-bar {
+    background-color: #81d4fa !important;
+}
+
+// ------------------------------------
+// MAT-EXPANSION-PANEL
+// ------------------------------------
+.mat-expansion-panel, .mat-expansion-panel-header {
+    background-color: #2e3440 !important;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-indicator {
+    color: white !important;
+}
+
+.mat-expansion-indicator::after {
+    color: white !important;
+}
+
+// ------------------------------------
+// MAT-PROGRESS-BAR
+// ------------------------------------
+
+.mat-progress-bar {
+    border-radius: 100px;
+    height: 17px;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: #0062ff !important;
+}
