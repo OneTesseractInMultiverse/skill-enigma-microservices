@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'app-contact-item',
@@ -7,4 +7,13 @@ import {Component} from '@angular/core';
 })
 
 export class ContactItemComponent {
+
+    // ---------------------------------
+    // COMPONENT PROPERTIES
+    // ---------------------------------
+    // INPUTS
+    @Input() icon: string;
+    @Input() text: string;
+    // ---------------------------------
+
 } // COMPONENT END
