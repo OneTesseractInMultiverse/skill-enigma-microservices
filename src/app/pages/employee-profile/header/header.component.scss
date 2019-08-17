@@ -1,7 +1,6 @@
 // IMPORT
 @import "../../../../@fuse/scss/fuse";
 
-
 // VARIABLES
 $IBM-blue-60: #0062ff;
 $IBM-cyan-20: #b3e6ff;
@@ -57,11 +56,6 @@ $IBM-cyan-20: #b3e6ff;
         @include media-breakpoint('gt-sm') {
             margin: 0 0 0 60px;
             height: 111px;
-        }
-
-        .contact-item-text {
-            color: #FFFFFF;
-            font-size: 18px;
         }
 
     } // CONTACT INFO END ---------------------------------------------
