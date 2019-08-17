@@ -12,6 +12,7 @@ import {SkillsAreaComponent} from './skills-panel/skills-area/skills-area.compon
 import {SkillComponent} from './skills-panel/skills-area/skill/skill.component';
 import {SkillComponentComponent} from './skills-panel/skills-area/skill/skill-component/skill-component.component';
 import {ContactItemComponent} from './header/contact-item/contact-item.component';
+import { BiographyComponent } from './biography/biography.component';
 
 @NgModule({
     declarations: [
@@ -19,13 +20,14 @@ import {ContactItemComponent} from './header/contact-item/contact-item.component
         EmployeeProfileComponent,
         HeaderComponent,
         SkillGrowthComponent,
+        BiographyComponent,
         // HEADER COMPONENTS
         ContactItemComponent,
         // SKILLS PANEL COMPONENTS
         SkillsPanelComponent,
         SkillsAreaComponent,
         SkillComponent,
-        SkillComponentComponent
+        SkillComponentComponent,
     ],
     imports: [
         //  CORE MODULES
