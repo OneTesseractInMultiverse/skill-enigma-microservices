@@ -6,7 +6,7 @@ import {HomeComponent} from './main/home/home.component';
 // ROUTES
 const APP_ROUTES: Routes = [
     {
-        path: 'employee-profile',
+        path: 'employee-profile/:employee_id',
         loadChildren: () => import('./pages/employee-profile/employee-profile.module').then(mod => mod.EmployeeProfileModule)
     },
     {
