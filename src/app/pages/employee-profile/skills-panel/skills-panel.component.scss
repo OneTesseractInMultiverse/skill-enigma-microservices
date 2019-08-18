@@ -1,0 +1,40 @@
+// IMPORT
+@import "../../../../@fuse/scss/fuse";
+
+// VARIABLES
+$IBM-blue-60: #0062ff;
+$shark-color: #2e3440;
+
+// ---------------------------------------------
+// UTILITIES CLASSES
+// ---------------------------------------------
+.blue-font {
+    color: $IBM-blue-60;
+}
+
+// ---------------------------------------------
+// ELEMENT CLASSES
+// ---------------------------------------------
+
+.skills-panel {
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+// ----------------------------------------------
+// MATERIAL COMPONENT CUSTOMIZE
+// ----------------------------------------------
+
+// MAT-TAB
+// --------------------------------------
+.mat-tab-labels {
+    background-color: $shark-color;
+}
+
+.mat-tab-label {
+    color: #FFFFFF !important;
+}
+
+.mat-ink-bar {
+    background-color: $IBM-blue-60 !important;
+}

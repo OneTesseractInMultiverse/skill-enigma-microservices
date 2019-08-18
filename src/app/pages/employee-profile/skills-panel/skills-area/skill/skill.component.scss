@@ -1,0 +1,51 @@
+// IMPORT
+@import "../../../../../../@fuse/scss/fuse";
+
+// VARIABLES
+$IBM-blue-60: #0062ff;
+$IBM-cyan-20: #b3e6ff;
+$shark-color: #2e3440;
+
+// ---------------------------------------------
+// UTILITIES CLASSES
+// ---------------------------------------------
+.white-font {
+    color: #FFFFFF;
+}
+
+// ---------------------------------------------
+// ELEMENT CLASSES
+// ---------------------------------------------
+
+.skill-card {
+    max-width: 500px;
+    min-width: 300px;
+    margin-bottom: 10px;
+}
+
+
+// ----------------------------------------------
+// MATERIAL COMPONENT CUSTOMIZE
+// ----------------------------------------------
+
+// MAT-EXPANSION-PANEL
+// ------------------------------------
+.mat-expansion-panel, .mat-expansion-panel-header {
+    background-color: $shark-color !important;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-indicator {
+    color: white !important;
+}
+
+.mat-expansion-indicator::after {
+    color: white !important;
+}
+
+// MAT-CHIP
+// ------------------------------------
+.mat-chip.mat-standard-chip {
+    background-color: $IBM-blue-60 !important;
+    color: $IBM-cyan-20 !important;
+    font-weight: bold !important;
+}

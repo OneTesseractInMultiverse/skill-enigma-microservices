@@ -1,26 +1,34 @@
 <!-- PAGE START -->
 <div id="profile" class="page-layout simple full-width">
 
-    <!-- HEADER -->
-    <div class="header p-24" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row"
-         fxLayoutAlign.gt-sm="space-between end">
+    <!----- PROFILE HEADER ------>
+    <app-header [NAME]="EMPLOYEE.name" [LAST_NAME]="EMPLOYEE.last_name" [POSITION]="EMPLOYEE.position"
+                [EMAIL]="EMPLOYEE.email" [ID]="EMPLOYEE.id"></app-header>
 
-        <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row"
-             fxLayoutAlign.gt-sm="start center">
+    <!---- PROFILE CONTENT ------->
+    <div class="w-100-p p-24">
 
-            <!--  PROFILE PICTURE -->
-            <img class="profile-image avatar huge" src="assets/images/avatars/Velazquez.jpg"
-                 [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+        <!-- PROFILE SECTION -->
+        <div class="w-100-p" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="24px">
 
-            <!-- NAME -->
-            <div class="name" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
-                Charlie Adams
-            </div>
+            <!--------------------------- BIOGRAPHY CARD -------------------------->
+            <app-biography fxFlex="1 0 0" [BIOGRAPHY]="EMPLOYEE.bio"></app-biography>
+
+            <!------------------------- SKILL GROWTH CHART ------------------------>
+            <app-skill-growth fxFlex="1 0 0"></app-skill-growth>
 
         </div>
+        <!-- PROFILE SECTION END -->
+
+        <!--------------------------------------------------------------------->
+        <mat-divider class="my-20"></mat-divider>
+        <!--------------------------------------------------------------------->
+
+        <!----------------------------- SKILLS PANEl -------------------------->
+        <app-skills-panel></app-skills-panel>
 
     </div>
-    <!-- / HEADER -->
+    <!-- CONTENT END -->
 
 </div>
 <!-- PAGE ENDS -->

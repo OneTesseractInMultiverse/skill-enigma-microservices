@@ -1,0 +1,37 @@
+<!-- HEADER -->
+<div class="header" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row"
+     fxLayoutAlign.gt-sm="start center">
+
+    <!--------------------------------  PROFILE IMAGE ------------------------------->
+    <img class="profile-image avatar huge" src="assets/images/avatars/Velazquez.jpg" alt="profile-image"
+         [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+
+    <!--------------------------------- HEADER TITLE -------------------------------->
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="center start">
+
+        <!-- PROFILE NAME -->
+        <div class="profile-name" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+            {{NAME}} {{LAST_NAME}}
+        </div>
+
+        <!-- EMPLOYEE POSITION -->
+        <div class="cyan-font mat-title" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+            {{POSITION}}
+        </div>
+
+    </div>
+    <!------------------------------ HEADER TITLE END ------------------------------->
+
+    <!------------------------------- CONTACT INFO ---------------------------------->
+    <div class="contact-info" fxFlex="1 0 0" fxLayout="row wrap" fxFlexAlign="center center" fxFlexAlign.gt-sm="end" fxLayoutGap="20px">
+
+        <!-- CONTACT ITEMS -->
+        <app-contact-item icon="perm_identity" text="{{ID}}"></app-contact-item>
+
+        <app-contact-item icon="email" text="{{EMAIL}}"></app-contact-item>
+
+    </div>
+    <!---------------------------- CONTACT INFO END --------------------------------->
+
+</div>
+<!-- HEADER END -->
