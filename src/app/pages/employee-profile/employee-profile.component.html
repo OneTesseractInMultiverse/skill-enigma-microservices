@@ -7,8 +7,17 @@
     <!---- PROFILE CONTENT ------->
     <div class="w-100-p p-24">
 
-        <!------------------------- SKILL GROWTH CHART ------------------------>
-        <app-skill-growth></app-skill-growth>
+        <!-- PROFILE SECTION -->
+        <div class="w-100-p" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="24px">
+
+            <!--------------------------- BIOGRAPHY CARD -------------------------->
+            <app-biography fxFlex="1 0 0"></app-biography>
+
+            <!------------------------- SKILL GROWTH CHART ------------------------>
+            <app-skill-growth fxFlex="1 0 0"></app-skill-growth>
+
+        </div>
+        <!-- PROFILE SECTION END -->
 
         <!--------------------------------------------------------------------->
         <mat-divider class="my-20"></mat-divider>

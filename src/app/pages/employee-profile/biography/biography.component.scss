@@ -1,0 +1,11 @@
+@import "src/@fuse/scss/fuse";
+
+.bio-text {
+    overflow: auto;
+    margin: 12px;
+    padding: 12px;
+
+    @include media-breakpoint('gt-sm') {
+        height: 272px;
+    }
+}
