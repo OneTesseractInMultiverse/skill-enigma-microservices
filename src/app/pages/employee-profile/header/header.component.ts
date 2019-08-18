@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor() { }
+    // -------------------------------------------------------------------------------
+    // COMPONENT PROPERTIES
+    // -------------------------------------------------------------------------------
+    @Input() ID: string;
+    @Input() NAME: string;
+    @Input() LAST_NAME: string;
+    @Input() POSITION: string;
+    @Input() EMAIL: string;
 
-  ngOnInit() {
-  }
+    // -------------------------------------------------------------------------------
 
 } // COMPONENT END

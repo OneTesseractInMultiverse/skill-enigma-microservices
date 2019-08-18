@@ -4,4 +4,5 @@ export interface Employee {
     name: string;
     last_name: string;
     bio: string;
+    position: string;
 } // INTERFACE END

@@ -24,7 +24,8 @@ export class EmployeeService {
     // -------------------------------------------------------------------------------
     // GET -> RETURN A SPECIFIC EMPLOYEE DATA
     // -------------------------------------------------------------------------------
-    public getEmployeeById(employeeId: string): Observable<Employee> {
+    getEmployeeById(employeeId: string): Observable<Employee> {
+        console.log(`${this.URL}/${employeeId}`);
         return this.http.get(`${this.URL}/${employeeId}`).pipe(
             map((res: Employee) => res)
         );

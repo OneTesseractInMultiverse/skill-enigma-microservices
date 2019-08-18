@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {EmployeeService} from '../../services/employee.service';
-import {Employee} from "../../interfaces/employee";
+import {Employee} from '../../interfaces/employee';
 
 @Component({
     selector: 'app-employee-profile',
@@ -9,16 +9,20 @@ import {Employee} from "../../interfaces/employee";
     styleUrls: ['./employee-profile.component.scss']
 })
 
-export class EmployeeProfileComponent {
+export class EmployeeProfileComponent implements OnInit {
 
     // -------------------------------------------------------------------------------
     // COMPONENT PROPERTIES
     // -------------------------------------------------------------------------------
-    EMPLOYEE: Employee;
+    EMPLOYEE: Employee = {position: '?', last_name: '?', name: '?', id: '?', email: '?', bio: '?'};
 
     // -------------------------------------------------------------------------------
 
     constructor(private route: ActivatedRoute, private employeeService: EmployeeService) {
+    }
+
+    ngOnInit(): void {
+        this.setEmployee();
     }
 
     // -------------------------------------------------------------------------------
@@ -33,6 +37,7 @@ export class EmployeeProfileComponent {
             value => {
                 // RETURN THE EMPLOYEE
                 this.EMPLOYEE = value;
+                console.log(value);
             }, error => {
                 // ERROR
                 console.error(error);

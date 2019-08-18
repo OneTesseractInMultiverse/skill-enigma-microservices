@@ -2,7 +2,8 @@
 <div id="profile" class="page-layout simple full-width">
 
     <!----- PROFILE HEADER ------>
-    <app-header></app-header>
+    <app-header [NAME]="EMPLOYEE.name" [LAST_NAME]="EMPLOYEE.last_name" [POSITION]="EMPLOYEE.position"
+                [EMAIL]="EMPLOYEE.email" [ID]="EMPLOYEE.id"></app-header>
 
     <!---- PROFILE CONTENT ------->
     <div class="w-100-p p-24">
@@ -11,7 +12,7 @@
         <div class="w-100-p" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="24px">
 
             <!--------------------------- BIOGRAPHY CARD -------------------------->
-            <app-biography fxFlex="1 0 0"></app-biography>
+            <app-biography fxFlex="1 0 0" [BIOGRAPHY]="EMPLOYEE.bio"></app-biography>
 
             <!------------------------- SKILL GROWTH CHART ------------------------>
             <app-skill-growth fxFlex="1 0 0"></app-skill-growth>

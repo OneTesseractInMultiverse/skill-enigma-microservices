@@ -11,12 +11,12 @@
 
         <!-- PROFILE NAME -->
         <div class="profile-name" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
-            Charlie Adams
+            {{NAME}} {{LAST_NAME}}
         </div>
 
-        <!-- EMPLOYEE PRIMARY ROLE -->
+        <!-- EMPLOYEE POSITION -->
         <div class="cyan-font mat-title" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
-            Software Developer
+            {{POSITION}}
         </div>
 
     </div>
@@ -26,9 +26,9 @@
     <div class="contact-info" fxFlex="1 0 0" fxLayout="row wrap" fxFlexAlign="center center" fxFlexAlign.gt-sm="end" fxLayoutGap="20px">
 
         <!-- CONTACT ITEMS -->
-        <app-contact-item icon="perm_identity" text="12312312312"></app-contact-item>
+        <app-contact-item icon="perm_identity" text="{{ID}}"></app-contact-item>
 
-        <app-contact-item icon="email" text="pancho@gmail.com"></app-contact-item>
+        <app-contact-item icon="email" text="{{EMAIL}}"></app-contact-item>
 
     </div>
     <!---------------------------- CONTACT INFO END --------------------------------->
