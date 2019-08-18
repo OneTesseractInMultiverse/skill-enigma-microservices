@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {Employee} from '../interfaces/employee';
 
 @Injectable({
     providedIn: 'root'
@@ -23,9 +24,9 @@ export class EmployeeService {
     // -------------------------------------------------------------------------------
     // GET -> RETURN A SPECIFIC EMPLOYEE DATA
     // -------------------------------------------------------------------------------
-    public getEmployeeById(employeeId: string): Observable<Response> {
+    public getEmployeeById(employeeId: string): Observable<Employee> {
         return this.http.get(`${this.URL}/${employeeId}`).pipe(
-            map((res: Response) => res)
+            map((res: Employee) => res)
         );
     } // GET END
 
