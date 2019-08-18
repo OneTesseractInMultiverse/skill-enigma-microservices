@@ -4,7 +4,9 @@
 
 export const environment = {
     production: false,
-    hmr       : false
+    hmr       : false,
+    api: 'https://tsundoku.appsecurity.info/skill_management',
+    apiVersion: 'v1'
 };
 
 /*
