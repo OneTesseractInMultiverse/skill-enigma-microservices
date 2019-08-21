@@ -18,6 +18,38 @@ export const navigation: FuseNavigation[] = [
         ]
     },
     {
+        id       : 'skill-management',
+        title    : 'Skill Management',
+        translate: 'NAV.SKILLS',
+        type     : 'group',
+        children : [
+            {
+                id       : 'skills',
+                title    : 'Skills',
+                translate: 'NAV.SKILL_ITEMS.SKILLS',
+                type     : 'item',
+                icon     : 'trending_up',
+                url      : '/skill-management/skills'
+            },
+            {
+                id       : 'employee-skills',
+                title    : 'Employees',
+                translate: 'NAV.SKILL_ITEMS.EMPLOYEE',
+                type     : 'item',
+                icon     : 'people',
+                url      : '/skill-management/employees'
+            },
+            {
+                id       : 'skill-sources',
+                title    : 'Learning Sources',
+                translate: 'NAV.SKILL_ITEMS.SOURCES',
+                type     : 'item',
+                icon     : 'timelapse',
+                url      : '/skill-management/sources'
+            }
+        ]
+    },
+    {
         id       : 'projects',
         title    : 'Projects',
         translate: 'NAV.APPLICATIONS',
@@ -38,46 +70,6 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'build',
                 url      : '/project/manage',
-            }
-        ]
-    },
-    {
-        id       : 'team',
-        title    : 'Team',
-        translate: 'NAV.TEAM',
-        type     : 'group',
-        children : [
-            {
-                id       : 'team-dashboard',
-                title    : 'Team Dashboard',
-                translate: 'NAV.TEAM_DASHBOARD',
-                type     : 'item',
-                icon     : 'how_to_reg',
-                url      : '/project/dashboard',
-            },
-            {
-                id       : 'team-manage',
-                title    : 'Manage Team',
-                translate: 'NAV.MANAGE_TEAM',
-                type     : 'item',
-                icon     : 'people',
-                url      : '/project/manage',
-            }
-        ]
-    },
-    {
-        id       : 'campus',
-        title    : 'Campus',
-        translate: 'NAV.CAMPUS',
-        type     : 'group',
-        children : [
-            {
-                id       : 'courses',
-                title    : 'Courses',
-                translate: 'NAV.COURSES',
-                type     : 'item',
-                icon     : 'school',
-                url      : '/campus/courses',
             }
         ]
     }

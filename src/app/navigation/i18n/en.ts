@@ -2,6 +2,8 @@ export const locale = {
     lang: 'en',
     data: {
         NAV: {
+            SKILLS: 'Skill Management',
+            LEARNING: 'Learning',
             APPLICATIONS: 'Dashboards',
             OVERVIEW: 'Overview',
             PROJECTS_DASHBOARD: 'Project Dashboard',
@@ -18,7 +20,13 @@ export const locale = {
             HOME        : {
                 TITLE: 'Home',
                 BADGE: '0'
+            },
+            SKILL_ITEMS : {
+                SKILLS: 'Skills',
+                EMPLOYEE: 'Employee Skills',
+                SOURCES: 'Sources'
             }
+
         }
     }
 };

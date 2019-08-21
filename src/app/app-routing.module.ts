@@ -10,6 +10,14 @@ const APP_ROUTES: Routes = [
         loadChildren: () => import('./pages/employee-profile/employee-profile.module').then(mod => mod.EmployeeProfileModule)
     },
     {
+        path: 'skill-management/employees',
+        loadChildren: () => import('./pages/list-employees/list-employees.module').then(mod => mod.ListEmployeesModule)
+    },
+    {
+        path: 'skill-management/skills',
+        loadChildren: () => import('./pages/list-skills/list-skills.module').then(mod => mod.ListSkillsModule)
+    },
+    {
         path: '**',
         component: HomeComponent
     }
