@@ -14,7 +14,7 @@ export class EmployeeProfileComponent implements OnInit {
     // -------------------------------------------------------------------------------
     // COMPONENT PROPERTIES
     // -------------------------------------------------------------------------------
-    EMPLOYEE: Employee = {position: '?', last_name: '?', name: '?', id: '?', email: '?', bio: '?'};
+    EMPLOYEE: Employee = {position: '?', last_name: '?', name: '?', id: '?', email: '?', bio: '?', picture_url: '?'};
 
     // -------------------------------------------------------------------------------
 
@@ -41,6 +41,7 @@ export class EmployeeProfileComponent implements OnInit {
             }, error => {
                 // ERROR
                 console.error(error);
+                alert('Unable to find employee');
             });
     } // method END
 

@@ -5,4 +5,5 @@ export interface Employee {
     last_name: string;
     bio: string;
     position: string;
+    picture_url: string;
 } // INTERFACE END

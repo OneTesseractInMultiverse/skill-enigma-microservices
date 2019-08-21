@@ -27,6 +27,8 @@ import { HelpNeededComponent } from './main/home/components/help-needed/help-nee
 import { ManagementItemTableComponent } from './main/home/components/management-item-table/management-item-table.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
+
 @NgModule({
     declarations: [
         AppComponent,
