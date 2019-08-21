@@ -1,0 +1,10 @@
+
+.roles-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.roles-container > * {
+  width: 100%;
+}
