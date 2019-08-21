@@ -16,6 +16,7 @@ export class HeaderComponent {
     @Input() LAST_NAME: string;
     @Input() POSITION: string;
     @Input() EMAIL: string;
+    @Input() AVATAR: string;
 
     // -------------------------------------------------------------------------------
 
