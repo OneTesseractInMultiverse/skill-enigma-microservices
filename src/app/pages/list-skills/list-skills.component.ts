@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+
+export interface UserData {
+    id: string;
+    name: string;
+    progress: string;
+    color: string;
+}
 
 @Component({
   selector: 'app-list-skills',
@@ -7,9 +15,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListSkillsComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-}
+} // CLASS ENDS -------------------------------------------------------------------------

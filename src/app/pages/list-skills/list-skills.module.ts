@@ -6,6 +6,7 @@ import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {ListSkillsComponent} from './list-skills.component';
+import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {ListSkillsComponent} from './list-skills.component';
       FuseSharedModule,
       // EXTERNAL LIBRARIES MODULE
       MaterialModule,
-      NgxChartsModule
+      NgxChartsModule,
+      NgxDatatableModule
   ]
 })
 export class ListSkillsModule { }

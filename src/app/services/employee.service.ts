@@ -31,4 +31,17 @@ export class EmployeeService {
         );
     } // GET END
 
+    // -------------------------------------------------------------------------------
+    // GET -> RETURN THE LIST OF ALL EMPLOYEES
+    // -------------------------------------------------------------------------------
+    /**
+     * Gets the list of employees
+     */
+    getEmployees(skip: number = 0, limit: number = 100): Observable<Employee[]> {
+        console.log(`${this.URL}`);
+        return this.http.get(`${this.URL}?skip=${skip}&limit=${limit}`).pipe(
+            map((res: Employee[]) => res)
+        );
+    } // GET EMPLOYEES ENDS -----------------------------------------------------------
+
 } // SERVICES END
