@@ -59,7 +59,7 @@ export class ListSkillsComponent implements OnInit {
         this.skillService.getSkills(0, 1000).subscribe(
             value => {
                 // RETURN THE EMPLOYEE
-                this.dataSource = new MatTableDataSource(value);
+                this.dataSource.data = value;
                 console.log(value);
             }, error => {
                 // ERROR

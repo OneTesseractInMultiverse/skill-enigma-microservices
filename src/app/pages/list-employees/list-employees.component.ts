@@ -10,7 +10,7 @@ import {EmployeeService} from '../../services/employee.service';
 })
 export class ListEmployeesComponent implements OnInit {
 
-    displayedColumns: string[] = ['id', 'name', 'last_name', 'email', 'position'];
+    displayedColumns: string[] = ['id', 'name', 'last_name', 'email', 'position', 'view'];
     dataSource: MatTableDataSource<Employee>;
 
     @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -51,7 +51,7 @@ export class ListEmployeesComponent implements OnInit {
         this.employeeService.getEmployees(0, 1000).subscribe(
             value => {
                 // RETURN THE EMPLOYEE
-                this.dataSource = new MatTableDataSource(value);
+                this.dataSource.data = value;
                 console.log(value);
             }, error => {
                 // ERROR
