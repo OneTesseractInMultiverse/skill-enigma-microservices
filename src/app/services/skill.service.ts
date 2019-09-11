@@ -50,4 +50,24 @@ export class SkillService {
             map((res: Skill[]) => res)
         );
     } // GET EMPLOYEES ENDS -----------------------------------------------------------
+
+     // -------------------------------------------------------------------------------
+    // POST -> POST NEW SKILL IN THE DB
+    // -------------------------------------------------------------------------------
+    /**
+     *
+     * @param skills obj
+     */
+    postSkill(skill: object){
+        console.log(skill);
+        console.log('jx');
+        return this.http.post(this.URL,skill).pipe(
+            map((res: Response) => {
+              return res;
+            } )
+        );
+      } // POST Skill ENDS -----------------------------------------------------------
+
+
+
 } // CLASS LIST SKILL COMPONENT -------------------------------------------------------
