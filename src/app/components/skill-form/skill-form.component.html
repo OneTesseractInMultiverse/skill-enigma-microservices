@@ -36,10 +36,8 @@
             </mat-radio-group>
           </div>
         <div>
-          <button mat-raised-button type="button" [disabled]="!skillForm.valid"  (click)="onSubmit(skillForm.value)">SUBMIT</button>
+          <button mat-raised-button type="button" [disabled]="!skillForm.valid"  (click)="onButtonClicked(skillForm.value)">{{buttonLabel}}</button>
           <button mat-raised-button type="button" (click)="onBack()">BACK</button>
          </div>
-      </form>
-
-    
+      </form>   
   </div>

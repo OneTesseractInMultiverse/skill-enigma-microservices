@@ -10,17 +10,16 @@ import { SkillService } from '../../services/skill.service';
 })
 export class CreateSkillsComponent implements OnInit {
   constructor(private skillService: SkillService, private router: Router) { }
-
+  buttonLabel:string = 'Submit';
   ngOnInit() {
     
- 
   }
 
-  
+  react(skillObj:object){
+    this.submit(skillObj);
+  }
+
   submit(skillsObj: object) {
-    console.log('insert');
-    console.log(skillsObj);
-    return false;
     this.skillService.postSkill(skillsObj).subscribe(
       res => {
           alert('New Skill Inserted');
@@ -31,27 +30,6 @@ export class CreateSkillsComponent implements OnInit {
       });
 
   }
-
-  update(skillsObj: object) {
-    console.log('update');
-    console.log(skillsObj);
-    return false;
-    this.skillService.postSkill(skillsObj).subscribe(
-      res => {
-          alert('New Skill Inserted');
-          this.router.navigate(['/skill-management/skills'])
-      }, error => {
-          // ERROR
-          alert('Unable to insert new skill');
-      });
-
-  }
-
-test($event){
-  console.log('dad');
-  console.log($event);
-}
-
 
 
   parseBool(val: object) {

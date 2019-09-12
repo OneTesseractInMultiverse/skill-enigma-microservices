@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, Input,  EventEmitter, SimpleChanges } from '@angular/core';
 import { FormBuilder , FormGroup, Validators} from '@angular/forms';
-import { SkillService } from 'app/services/skill.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,18 +9,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class SkillFormComponent implements OnInit {
 
-  @Input() myFriend: string
-
   @Input() skill: object;
-  @Output() test:any = new EventEmitter();
-  @Output() submit:any = new EventEmitter<object>();
+  @Input() buttonLabel: String;
+  @Output() buttonClicked = new EventEmitter<object>();
 
-  
-  constructor(private fb: FormBuilder, private skillService: SkillService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   skillForm: FormGroup;
   ngOnInit() {
     this.skillForm = this.fb.group({
+      id: ['', Validators.required],
       title: ['', Validators.required],
       description: ['', Validators.required],
       skill_type: ['', Validators.required],
@@ -29,17 +26,23 @@ export class SkillFormComponent implements OnInit {
       shortage: ['', Validators.required]
       });
   }
-  onSubmit(objSkill:object){
-    this.test.emit(objSkill);
-  }
-  onTest(){
-    this.test.emit();
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes.skill){
+      this.updateSkill(changes.skill,changes.skill.firstChange);
+    }
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    if(!changes.skill.firstChange){
-      const skillObj = changes.skill.currentValue;
+  onButtonClicked(event:object) {
+    console.log(event);
+    this.buttonClicked.emit(event);
+  }
+
+  updateSkill(skillChanges:object, isFirstChange:boolean){
+    if(!isFirstChange){
+      // TO DO: Look the way to define the object with the attributes before is updated
+      const skillObj = skillChanges.currentValue;
       this.skillForm.patchValue({
+        id:skillObj.id,
         title: skillObj.title,
         description: skillObj.description,
         skill_type: skillObj.skill_type,
@@ -48,7 +51,6 @@ export class SkillFormComponent implements OnInit {
       });
     }
   }
-
   onBack(){
     this.router.navigate(['/skill-management/skills'])
   }

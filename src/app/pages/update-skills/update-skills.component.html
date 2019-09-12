@@ -1,1 +1,1 @@
-<app-skill-form   [skill] ="this.SKILL" (update)="update($event)"></app-skill-form>
+<app-skill-form  (buttonClicked)="react($event)" [buttonLabel]="buttonLabel" [skill]='this.SKILL'></app-skill-form>

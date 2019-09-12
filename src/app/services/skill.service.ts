@@ -60,7 +60,6 @@ export class SkillService {
      */
     postSkill(skill: object){
         console.log(skill);
-        console.log('jx');
         return this.http.post(this.URL,skill).pipe(
             map((res: Response) => {
               return res;
@@ -68,6 +67,20 @@ export class SkillService {
         );
       } // POST Skill ENDS -----------------------------------------------------------
 
+    // -------------------------------------------------------------------------------
+    // PUT -> UPDATE SKILL IN THE DB
+    // -------------------------------------------------------------------------------
+    /**
+     *
+     * @param skills obj
+     */
+    putSkill(skill_id:string,skill: object){
+        return this.http.put(this.URL+'/'+skill_id,skill).pipe(
+            map((res: Response) => {
+                return res;
+            } )
+        );
+    } // POST Skill ENDS -----------------------------------------------------------
 
 
 } // CLASS LIST SKILL COMPONENT -------------------------------------------------------
