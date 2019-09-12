@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router"
+import { Router } from "@angular/router"
 import { SkillService } from '../../services/skill.service';
 
 
@@ -10,23 +10,23 @@ import { SkillService } from '../../services/skill.service';
 })
 export class CreateSkillsComponent implements OnInit {
   constructor(private skillService: SkillService, private router: Router) { }
-  buttonLabel:string = 'Submit';
+  buttonLabel: string = 'Submit';
   ngOnInit() {
-    
+
   }
 
-  react(skillObj:object){
+  react(skillObj: object) {
     this.submit(skillObj);
   }
 
   submit(skillsObj: object) {
     this.skillService.postSkill(skillsObj).subscribe(
       res => {
-          alert('New Skill Inserted');
-          this.router.navigate(['/skill-management/skills'])
+        alert('New Skill Inserted');
+        this.router.navigate(['/skill-management/skills'])
       }, error => {
-          // ERROR
-          alert('Unable to insert new skill');
+        // ERROR
+        alert('Unable to insert new skill');
       });
 
   }
@@ -34,6 +34,6 @@ export class CreateSkillsComponent implements OnInit {
 
   parseBool(val: object) {
     return JSON.parse(String(val).toLowerCase());
-}
+  }
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CreateSkillsComponent} from './create-skills.component';
-import {CommonModule} from '@angular/common';
+import { CreateSkillsComponent } from './create-skills.component';
+import { CommonModule } from '@angular/common';
 
 
 const routes: Routes = [
@@ -13,10 +13,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-      CommonModule,
-      RouterModule.forChild(routes)
-  ],
-  exports: [RouterModule]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes)
+    ],
+    exports: [RouterModule]
 })
 export class CreateSkillsRoutingModule { }

@@ -1,15 +1,12 @@
-
-.mat-radio-button {
-  margin: 0 12px;
-}
-
 .box {
   display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  margin-left: 0.3%;
+  height: 100%;
+  width: 100%;
 }
 
-.radio-high-demand{
-  margin: 5% auto;
+.div-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

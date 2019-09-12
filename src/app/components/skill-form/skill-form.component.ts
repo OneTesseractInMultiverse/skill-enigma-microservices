@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, Input,  EventEmitter, SimpleChanges } from '@angular/core';
-import { FormBuilder , FormGroup, Validators} from '@angular/forms';
+import { Component, OnInit, Output, Input, EventEmitter, SimpleChanges } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -18,31 +18,30 @@ export class SkillFormComponent implements OnInit {
   skillForm: FormGroup;
   ngOnInit() {
     this.skillForm = this.fb.group({
-      id: ['', Validators.required],
       title: ['', Validators.required],
       description: ['', Validators.required],
       skill_type: ['', Validators.required],
       is_high_demand: ['', Validators.required],
       shortage: ['', Validators.required]
-      });
+    });
   }
   ngOnChanges(changes: SimpleChanges) {
-    if(changes.skill){
-      this.updateSkill(changes.skill,changes.skill.firstChange);
+    if (changes.skill) {
+      this.updateSkill(changes.skill, changes.skill.firstChange);
     }
   }
 
-  onButtonClicked(event:object) {
-    console.log(event);
+  onButtonClicked(event: object) {
     this.buttonClicked.emit(event);
   }
 
-  updateSkill(skillChanges:object, isFirstChange:boolean){
-    if(!isFirstChange){
+  updateSkill(skillChanges: object, isFirstChange: boolean) {
+    if (!isFirstChange) {
       // TO DO: Look the way to define the object with the attributes before is updated
+      // @ts-ignore
       const skillObj = skillChanges.currentValue;
       this.skillForm.patchValue({
-        id:skillObj.id,
+        id: skillObj.id,
         title: skillObj.title,
         description: skillObj.description,
         skill_type: skillObj.skill_type,
@@ -51,7 +50,7 @@ export class SkillFormComponent implements OnInit {
       });
     }
   }
-  onBack(){
+  onBack() {
     this.router.navigate(['/skill-management/skills'])
   }
 }
