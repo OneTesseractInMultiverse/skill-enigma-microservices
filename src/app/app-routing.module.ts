@@ -35,7 +35,7 @@ const APP_ROUTES: Routes = [
     },
     {
         path: '**',
-        component: HomeComponent
+        loadChildren: () => import('./pages/landing/landing.module').then(mod => mod.LandingModule)
     }
 ];
 

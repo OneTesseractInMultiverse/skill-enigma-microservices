@@ -26,6 +26,7 @@ import { TmsComponent } from './main/home/components/tms/tms.component';
 import { HelpNeededComponent } from './main/home/components/help-needed/help-needed.component';
 import { ManagementItemTableComponent } from './main/home/components/management-item-table/management-item-table.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -40,7 +41,8 @@ import { AppRoutingModule } from './app-routing.module';
         LowlightsComponent,
         TmsComponent,
         HelpNeededComponent,
-        ManagementItemTableComponent
+        ManagementItemTableComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
