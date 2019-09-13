@@ -1,28 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ListSkillsRoutingModule } from './list-skills-routing.module';
 import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
-import {ListSkillsComponent} from './list-skills.component';
-import {NgxDatatableModule} from '@swimlane/ngx-datatable';
-
+import {SkillFormComponent} from '../../components/skill-form/skill-form.component'
 
 
 @NgModule({
-  declarations: [
-      ListSkillsComponent
-  ],
-  imports: [
-    CommonModule,
-    ListSkillsRoutingModule,
+  declarations: [ SkillFormComponent ],
+  imports:[ 
+      CommonModule,
       //  FUSE MODULE
       FuseSharedModule,
       // EXTERNAL LIBRARIES MODULE
       MaterialModule,
-      NgxChartsModule,
-      NgxDatatableModule
-  ]
-})
-export class ListSkillsModule { }
+      NgxChartsModule 
+    ],
+  exports:      [ SkillFormComponent ]
+ })
+export class SkillDeclarationModule { }

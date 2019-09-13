@@ -1,0 +1,49 @@
+<mat-card>
+  <div class="form">
+    <form [formGroup]="skillForm">
+      <div>
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" placeholder="Title">
+          <mat-hint>Required</mat-hint>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea formControlName="description" matInput placeholder="Description"></textarea>
+          <mat-hint>Required</mat-hint>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Skill Type</mat-label>
+          <input matInput formControlName="skill_type" placeholder="Skill Type">
+          <mat-hint>Required</mat-hint>
+        </mat-form-field>
+      </div>
+      <div class="radio">
+        <mat-label>Is High Demand: </mat-label>
+        <mat-radio-group formControlName="is_high_demand">
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <div class="divider"></div>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="radio">
+        <mat-label>Shortage: </mat-label>
+        <mat-radio-group formControlName="shortage">
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <div class="divider"></div>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div>
+        <button mat-raised-button type="button" [disabled]="!skillForm.valid"
+          (click)="onButtonClicked(skillForm.value)">{{buttonLabel}}</button>
+        <div class="divider"></div>
+        <button mat-raised-button type="button" (click)="onBack()">BACK</button>
+      </div>
+    </form>
+  </div>
+</mat-card>

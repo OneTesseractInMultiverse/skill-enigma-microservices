@@ -18,6 +18,14 @@ const APP_ROUTES: Routes = [
         loadChildren: () => import('./pages/list-skills/list-skills.module').then(mod => mod.ListSkillsModule)
     },
     {
+        path: 'skill-management/create',
+        loadChildren: () => import('./pages/create-skills/create-skills.module').then(mod => mod.CreateSkillsModule)
+    },
+    {
+        path: 'skill-management/update/:skill_id',
+        loadChildren: () => import('./pages/update-skills/update-skills.module').then(mod => mod.UpdateSkillsModule)
+    },
+    {
         path: 'roles-management/roles',
         loadChildren: () => import('./pages/list-roles/list-roles.module').then(mod => mod.ListRolesModule)
     },
