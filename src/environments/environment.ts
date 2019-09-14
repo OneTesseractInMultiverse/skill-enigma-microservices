@@ -5,7 +5,7 @@
 export const environment = {
     production: false,
     hmr       : false,
-    api: 'https://tsundoku.appsecurity.info/skill_management',
+    api: 'https://api.ibmcloudcr.com/skill_management',
     apiVersion: 'v1'
 };
 
