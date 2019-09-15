@@ -2,6 +2,15 @@ mat-icon {
     font-size: 40px;
 }
 
+.announcement {
+    border-top: #444444 1px solid;
+    cursor: pointer;
+}
+
+.announcement:hover {
+    color: #0073e6;
+}
+
 //.fuse-widget-front {
 //    background-color: rgba(0, 0, 0, 0.5) !important;
 //    color: white;
