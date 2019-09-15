@@ -18,19 +18,28 @@
             </div>
 
             <div class="px-8 px-md-16">
-                <fuse-shortcuts [navigation]="navigation"></fuse-shortcuts>
+                <fuse-shortcuts *ngIf="isAuthenticated" [navigation]="navigation"></fuse-shortcuts>
             </div>
 
         </div>
 
         <div class="" fxFlex="0 1 auto" fxLayout="row" fxLayoutAlign="start center">
 
-            <button mat-button [matMenuTriggerFor]="userMenu"
+
+            <button *ngIf="this.isAuthenticated" mat-button [matMenuTriggerFor]="userMenu"
                     class="user-button">
                 <div fxLayout="row" fxLayoutAlign="center center">
                     <img class="avatar mr-0 mr-sm-16" src="assets/images/avatars/generic.png">
-                    <span class="username mr-12" fxHide fxShow.gt-sm>John Smith</span>
+                    <span class="username mr-12" fxHide fxShow.gt-sm>{{this.user.user_claims.name}}</span>
                     <mat-icon class="s-16" fxHide.xs>keyboard_arrow_down</mat-icon>
+                </div>
+            </button>
+
+            <button *ngIf="!this.isAuthenticated" mat-button
+                    class="user-button" (click)="login()">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <mat-icon>lock_open</mat-icon>
+                    <span class="username mr-12" fxHide fxShow.gt-sm>Login</span>
                 </div>
             </button>
 
@@ -41,7 +50,7 @@
                     <span>My Profile</span>
                 </button>
 
-                <button mat-menu-item class="">
+                <button mat-menu-item class="" [routerLink]="['/logout']">
                     <mat-icon>exit_to_app</mat-icon>
                     <span>Logout</span>
                 </button>
@@ -50,7 +59,7 @@
 
             <div class="toolbar-separator"></div>
 
-            <fuse-search-bar (input)="search($event)"></fuse-search-bar>
+            <fuse-search-bar *ngIf="isAuthenticated" (input)="search($event)"></fuse-search-bar>
 
             <div class="toolbar-separator"></div>
 
