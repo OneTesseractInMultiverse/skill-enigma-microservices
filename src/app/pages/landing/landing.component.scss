@@ -5,12 +5,19 @@
     color: #0072c3;
 }
 
+#background {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    background: url("../../../assets/images/backgrounds/taylor-vick-M5tzZtFCOfs-unsplash.jpg") no-repeat center;
+    background-size: cover;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
 #landing-page {
     min-height: 100%;
     width: 100%;
-    background-color: #1a1a1a;
-    background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 #content-container {
@@ -26,6 +33,7 @@
 // LANDING CONTAINER ENDS
 
 .fuse-widget-front {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: #444444 solid 1px !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
     color: white;
 }
