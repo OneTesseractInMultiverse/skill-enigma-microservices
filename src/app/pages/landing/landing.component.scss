@@ -1,0 +1,15 @@
+// IMPORT
+@import "../../../@fuse/scss/fuse";
+
+#landing-page-container {
+    width: 100%;
+    height: 300px;
+    background-color: #4CAF50;
+    margin: auto;
+
+    //
+    @include media-breakpoint('gt-md') {
+        width: 1200px;
+    }
+
+} // LANDING CONTAINER ENDS
