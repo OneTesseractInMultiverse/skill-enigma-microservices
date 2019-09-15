@@ -7,17 +7,22 @@ import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {LandingComponent} from './landing.component';
-
+import {FuseWidgetModule} from '../../../@fuse/components';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+import {QuickPanelComponent} from './quick-panel/quick-panel.component';
 
 @NgModule({
     declarations: [
-        LandingComponent
+        LandingComponent,
+        AnnouncementsComponent,
+        QuickPanelComponent
     ],
     imports: [
         CommonModule,
         LandingRoutingModule,
         //  FUSE MODULE
         FuseSharedModule,
+        FuseWidgetModule,
         // EXTERNAL LIBRARIES MODULE
         MaterialModule,
         NgxChartsModule,
