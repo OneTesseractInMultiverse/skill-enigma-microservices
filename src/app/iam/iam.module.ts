@@ -24,6 +24,9 @@ import { LoginMessageComponent } from './_components/login-message/login-message
         FuseSharedModule,
         // EXTERNAL LIBRARIES MODULE
         MaterialModule
+    ],
+    exports: [
+        FuseSharedModule
     ]
 })
 export class IamModule {

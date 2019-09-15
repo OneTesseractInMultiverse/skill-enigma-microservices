@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+.login-card {
+    img {
+        padding: 2em;
+        max-height: 200px;
+    }
+    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+    font-family: 'IBM Plex Sans', sans-serif;
+    max-width: 500px;
+    margin: 5rem auto auto;
+    margin-bottom: 3em;
+    text-align: center;
+    border:2px solid #000000;
+}
+.blank {
+    background-color: #2A2A2A;
+    background-image: url("../../../../assets/images/backgrounds/ds.jpg");
+    background-size: cover;
+    background-blend-mode: screen;
+}
+
+.login-actions {
+    margin-bottom: 3em;
+}
