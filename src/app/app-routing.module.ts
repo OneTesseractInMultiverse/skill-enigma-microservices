@@ -36,8 +36,13 @@ const APP_ROUTES: Routes = [
         canActivate: [AuthGuard]
     },
     {
-        path: 'roles-management/create',
+        path: 'role-management/create',
         loadChildren: () => import('./pages/create-roles/create-roles.module').then(mod => mod.CreateRolesModule),
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'role-management/update/:role_id',
+        loadChildren: () => import('./pages/update-roles/update-roles.module').then(mod => mod.UpdateRolesModule),
         canActivate: [AuthGuard]
     },
     {

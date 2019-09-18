@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CreateRolesRoutingModule } from './create-roles-routing.module';
+import { UpdateRolesRoutingModule } from './update-roles-routing.module';
 import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
-import {CreateRolesComponent} from './create-roles.component';
-import { RoleDeclarationModule } from '../declarations/role-declaration.module'
+import {UpdateRolesComponent} from './update-roles.component';
+import {RoleDeclarationModule} from '../declarations/role-declaration.module'
 
 
 @NgModule({
   declarations: [
-    CreateRolesComponent
+    UpdateRolesComponent
   ],
   imports: [
     CommonModule,
-    CreateRolesRoutingModule,
+    UpdateRolesRoutingModule,
       //  FUSE MODULE
       FuseSharedModule,
       // EXTERNAL LIBRARIES MODULE
@@ -24,4 +24,4 @@ import { RoleDeclarationModule } from '../declarations/role-declaration.module'
       RoleDeclarationModule
   ]
 })
-export class CreateRolesModule { }
+export class UpdateRolesModule { }

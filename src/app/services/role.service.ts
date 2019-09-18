@@ -19,6 +19,20 @@ export class RoleService {
     constructor(private http: HttpClient) {
     }
 
+      // -------------------------------------------------------------------------------
+    // GET -> RETURN THE LIST OF ALL SKILLS
+    // -------------------------------------------------------------------------------
+    /**
+     *
+     * @param skip
+     * @param limit
+     */
+    getRoles(skip: number = 0, limit: number = 100): Observable<Role[]> {
+      console.log(`${this.URL}`);
+      return this.http.get(`${this.URL}?skip=${skip}&limit=${limit}`).pipe(
+          map((res: Role[]) => res)
+      );
+  } // GET 
        // -------------------------------------------------------------------------------
     // GET -> RETURN A SPECIFIC Role DATA
     // -------------------------------------------------------------------------------
@@ -37,11 +51,29 @@ export class RoleService {
    *
    * @param role
    */
-  saveRole(role){
+  saveRole(role:object){
     return this.http.post(this.URL,role).pipe(
         map((res: Response) => {
           return res;
         } )
     );
   }
+
+   // -------------------------------------------------------------------------------
+    // PUT -> UPDATE ROLE IN THE DB
+    // -------------------------------------------------------------------------------
+    /**
+     *
+     * @param role obj
+     */
+    putRole(role_id:string,role: object){
+      return this.http.put(this.URL+'/'+role_id,role).pipe(
+          map((res: Response) => {
+              return res;
+          } )
+      );
+  } // PUT Role ENDS -----------------------------------------------------------
+
+
+  
 }

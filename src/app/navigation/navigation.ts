@@ -18,6 +18,22 @@ export const navigation: FuseNavigation[] = [
         ]
     },
     {
+        id       : 'role-management',
+        title    : 'Role Management',
+        translate: 'NAV.ROLE',
+        type     : 'group',
+        children : [
+            {
+                id       : 'role',
+                title    : 'ROLES',
+                translate: 'NAV.ROLE_ITEMS.ROLES',
+                type     : 'item',
+                icon     : 'trending_up',
+                url      : '/roles-management/roles'
+            }
+        ]
+    },
+    {
         id       : 'skill-management',
         title    : 'Skill Management',
         translate: 'NAV.SKILLS',
