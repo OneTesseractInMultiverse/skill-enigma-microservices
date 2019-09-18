@@ -6,7 +6,7 @@ import { FuseSharedModule } from '../../../@fuse/shared.module';
 import { MaterialModule } from '../../modules/material/material.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CreateSkillsComponent } from './create-skills.component';
-import { SkillDeclarationModule } from '../delarations/skill-declaration.module'
+import { SkillDeclarationModule } from '../declarations/skill-declaration.module'
 
 @NgModule({
   declarations: [
