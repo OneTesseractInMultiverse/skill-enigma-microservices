@@ -46,6 +46,22 @@ const APP_ROUTES: Routes = [
         canActivate: [AuthGuard]
     },
     {
+        path: 'knowledge-source-management/knowledge_sources',
+        loadChildren: () => import('./pages/list-knowledgesources/list-knowledgesources.module').then(mod => mod.ListKnowledgesourcesModule),
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'knowledge-source-management/create',
+        loadChildren: () => import('./pages/create-knowledgesources/create-knowledgesources.module').then(mod => mod.CreateKnowledgesourcesModule),
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'role-management/update/:role_id',
+        loadChildren: () => import('./pages/update-knowledgesources/update-knowledgesources.module').then(mod => mod.UpdateKnowledgesourcesModule),
+        canActivate: [AuthGuard]
+    },
+
+    {
         path: '**',
         loadChildren: () => import('./pages/landing/landing.module').then(mod => mod.LandingModule),
         canActivate: [AuthGuard]

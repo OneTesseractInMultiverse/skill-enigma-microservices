@@ -30,6 +30,9 @@ import {LandingComponent} from './pages/landing/landing.component';
 import {ErrorInterceptor} from './iam/_helpers/error.interceptor';
 import {JwtInterceptor} from './iam/_helpers/jwt.interceptor';
 import {IamModule} from './iam/iam.module';
+import { ListKnowledgesourcesComponent } from './pages/list-knowledgesources/list-knowledgesources.component';
+import { UpdateKnowledgesourcesComponent } from './pages/update-knowledgesources/update-knowledgesources.component';
+import { CreateKnowledgesourcesComponent } from './pages/create-knowledgesources/create-knowledgesources.component';
 
 
 @NgModule({
