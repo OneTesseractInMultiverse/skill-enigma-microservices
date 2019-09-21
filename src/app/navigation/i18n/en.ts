@@ -4,6 +4,7 @@ export const locale = {
         NAV: {
             SKILLS: 'Skill Management',
             ROLE: 'Role Management',
+            KNOWLEDGESOURCE: 'Knowledge Management',
             LEARNING: 'Learning',
             APPLICATIONS: 'Dashboards',
             OVERVIEW: 'Overview',
@@ -29,6 +30,9 @@ export const locale = {
             },
             ROLE_ITEMS : {
                 ROLES: 'Roles'
+            },
+            KNOWLEDGESOURCE_ITEMS : {
+                KNOWLEDGESOURCES: 'Knowledge Source'
             }
 
         }

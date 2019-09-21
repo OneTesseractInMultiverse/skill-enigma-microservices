@@ -23,7 +23,7 @@ export class CreateKnowledgesourcesComponent implements OnInit {
     this.knowledgesourceService.postKnowledgesource(knowledgesourcesObj).subscribe(
       res => {
         alert('New Knowledgesource Inserted');
-        this.router.navigate(['/knowledgesource-management/knowledgesources'])
+        this.router.navigate(['/knowledgesource-management/knowledgesource'])
       }, error => {
         // ERROR
         alert('Unable to insert new knowledgesource');

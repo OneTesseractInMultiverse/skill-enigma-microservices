@@ -51,6 +51,6 @@ export class KnowledgesourceFormComponent implements OnInit {
     }
   }
   onBack() {
-    this.router.navigate(['/knowledgesource-management/knowledgesources'])
+    this.router.navigate(['/knowledgesource-management/knowledgesource'])
   }
 }

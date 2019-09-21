@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ListSkillsComponent } from './list-skills.component';
 
 describe('ListSkillsComponent', () => {

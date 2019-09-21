@@ -45,7 +45,7 @@ export class UpdateKnowledgesourcesComponent implements OnInit {
     this.knowledgesourceService.putKnowledgesource(knowledgesource_id, knowledgesourcesObj).subscribe(
       res => {
         alert('Knowledgesource Updated');
-        this.router.navigate(['/knowledgesource-management/knowledgesources'])
+        this.router.navigate(['/knowledgesource-management/knowledgesource'])
       }, error => {
         // ERROR
         alert('Unable to insert new knowledgesource');

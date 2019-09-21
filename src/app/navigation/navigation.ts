@@ -33,6 +33,22 @@ export const navigation: FuseNavigation[] = [
             }
         ]
     },
+    { 
+        id       : 'knowledgesource-management',
+        title    : 'Knowledge Source Management',
+        translate: 'NAV.KNOWLEDGESOURCE',
+        type     : 'group',
+        children : [
+            {
+                id       : 'knowledgesource',
+                title    : 'KNOWLEDGESOURCES',
+                translate: 'NAV.KNOWLEDGESOURCE_ITEMS.KNOWLEDGESOURCES',
+                type     : 'item',
+                icon     : 'trending_up',
+                url      : '/knowledgesource-management/knowledgesource'
+            }
+        ]
+    },
     {
         id       : 'skill-management',
         title    : 'Skill Management',

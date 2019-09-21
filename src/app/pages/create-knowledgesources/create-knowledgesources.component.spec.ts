@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateKnowledgesourcesComponent } from './create-knowledgesources.component';
 
-describe('ListRolesComponent', () => {
+describe('ListKnowledgesourcesComponent', () => {
   let component: CreateKnowledgesourcesComponent;
   let fixture: ComponentFixture<CreateKnowledgesourcesComponent>;
 
