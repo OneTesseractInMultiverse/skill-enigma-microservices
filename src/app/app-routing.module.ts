@@ -46,7 +46,7 @@ const APP_ROUTES: Routes = [
         canActivate: [AuthGuard]
     },
     {
-        path: 'knowledgesource-management/knowledge_sources',
+        path: 'knowledgesource-management/knowledge_source',
         loadChildren: () => import('./pages/list-knowledgesources/list-knowledgesources.module').then(mod => mod.ListKnowledgesourcesModule),
         canActivate: [AuthGuard]
     },
