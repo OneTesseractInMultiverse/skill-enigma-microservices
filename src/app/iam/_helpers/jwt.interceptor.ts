@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from "@angular/common/http";
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-/*
-The JWT interceptor intercepts the incoming requests from the application/user and adds JWT token to the request's Authorization header, only if the user is logged in.
-This JWT token in the request header is required to access the SECURE END API POINTS on the server
-*/
+// ---------------------------------------------------------------------------------
+// JWT INTERCEPTOR
+// ---------------------------------------------------------------------------------
+/**
+ * The JWT interceptor intercepts the incoming requests from the application/user
+ * and adds JWT token to the request's Authorization header, only if the user is
+ * logged in. This JWT token in the request header is required to access the
+ * SECURE END API POINTS on the server
+ */
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor{

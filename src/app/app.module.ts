@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from '@angular/router';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
@@ -26,8 +26,10 @@ import {TmsComponent} from './main/home/components/tms/tms.component';
 import {HelpNeededComponent} from './main/home/components/help-needed/help-needed.component';
 import {ManagementItemTableComponent} from './main/home/components/management-item-table/management-item-table.component';
 import {AppRoutingModule} from './app-routing.module';
-import {LoginComponent} from './pages/login/login.component';
 import {LandingComponent} from './pages/landing/landing.component';
+import {ErrorInterceptor} from './iam/_helpers/error.interceptor';
+import {JwtInterceptor} from './iam/_helpers/jwt.interceptor';
+import {IamModule} from './iam/iam.module';
 
 
 @NgModule({
@@ -40,10 +42,10 @@ import {LandingComponent} from './pages/landing/landing.component';
         LowlightsComponent,
         TmsComponent,
         HelpNeededComponent,
-        ManagementItemTableComponent,
-        LoginComponent
+        ManagementItemTableComponent
     ],
     imports: [
+        IamModule,
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
@@ -69,6 +71,10 @@ import {LandingComponent} from './pages/landing/landing.component';
         SampleModule,
         FuseWidgetModule,
         AppRoutingModule
+    ],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     ],
     bootstrap: [
         AppComponent

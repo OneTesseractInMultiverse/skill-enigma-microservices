@@ -3,6 +3,7 @@ export const locale = {
     data: {
         NAV: {
             SKILLS: 'Skill Management',
+            ROLE: 'Role Management',
             LEARNING: 'Learning',
             APPLICATIONS: 'Dashboards',
             OVERVIEW: 'Overview',
@@ -25,6 +26,9 @@ export const locale = {
                 SKILLS: 'Skills',
                 EMPLOYEE: 'Employee Skills',
                 SOURCES: 'Sources'
+            },
+            ROLE_ITEMS : {
+                ROLES: 'Roles'
             }
 
         }

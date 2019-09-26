@@ -6,6 +6,7 @@ import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {CreateRolesComponent} from './create-roles.component';
+import { RoleDeclarationModule } from '../declarations/role-declaration.module'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {CreateRolesComponent} from './create-roles.component';
       FuseSharedModule,
       // EXTERNAL LIBRARIES MODULE
       MaterialModule,
-      NgxChartsModule
+      NgxChartsModule,
+      RoleDeclarationModule
   ]
 })
 export class CreateRolesModule { }

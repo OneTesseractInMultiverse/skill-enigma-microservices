@@ -8,6 +8,9 @@ import { FuseConfigService } from '@fuse/services/config.service';
 import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
 import { navigation } from 'app/navigation/navigation';
+import {AuthenticationService} from '../../../iam/_services';
+import {User} from '../../../iam/_models';
+import {Router} from '@angular/router';
 
 @Component({
     selector     : 'toolbar',
@@ -28,6 +31,11 @@ export class ToolbarComponent implements OnInit, OnDestroy
 
     // Private
     private _unsubscribeAll: Subject<any>;
+    public user: User;
+    public isAuthenticated: boolean;
+    public userName: string;
+    public userEmail: string;
+    public userId: string;
 
     /**
      * Constructor
@@ -35,59 +43,30 @@ export class ToolbarComponent implements OnInit, OnDestroy
      * @param {FuseConfigService} _fuseConfigService
      * @param {FuseSidebarService} _fuseSidebarService
      * @param {TranslateService} _translateService
+     * @param authService
+     * @param router
      */
     constructor(
         private _fuseConfigService: FuseConfigService,
         private _fuseSidebarService: FuseSidebarService,
-        private _translateService: TranslateService
+        private _translateService: TranslateService,
+        private authService: AuthenticationService,
+        private router: Router
     )
     {
-        // Set the defaults
-        this.userStatusOptions = [
-            {
-                title: 'Online',
-                icon : 'icon-checkbox-marked-circle',
-                color: '#4CAF50'
-            },
-            {
-                title: 'Away',
-                icon : 'icon-clock',
-                color: '#FFC107'
-            },
-            {
-                title: 'Do not Disturb',
-                icon : 'icon-minus-circle',
-                color: '#F44336'
-            },
-            {
-                title: 'Invisible',
-                icon : 'icon-checkbox-blank-circle-outline',
-                color: '#BDBDBD'
-            },
-            {
-                title: 'Offline',
-                icon : 'icon-checkbox-blank-circle-outline',
-                color: '#616161'
-            }
-        ];
-
-        this.languages = [
-            {
-                id   : 'en',
-                title: 'English',
-                flag : 'us'
-            },
-            {
-                id   : 'tr',
-                title: 'Turkish',
-                flag : 'tr'
-            }
-        ];
 
         this.navigation = navigation;
 
         // Set the private defaults
         this._unsubscribeAll = new Subject();
+
+        router.events.subscribe((value => {
+            console.log(value);
+            this.isAuthenticated = this.authService.isAuthenticated();
+            if (this.isAuthenticated){
+                this.user = this.authService.getUser();
+            }
+        }));
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -110,6 +89,10 @@ export class ToolbarComponent implements OnInit, OnDestroy
 
         // Set the selected language from default languages
         this.selectedLanguage = _.find(this.languages, {id: this._translateService.currentLang});
+    }
+
+    login(): void{
+        this.authService.login();
     }
 
     /**

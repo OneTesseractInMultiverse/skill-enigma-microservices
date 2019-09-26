@@ -4,6 +4,9 @@ import { takeUntil } from 'rxjs/operators';
 
 import { FuseConfigService } from '@fuse/services/config.service';
 import { navigation } from 'app/navigation/navigation';
+import {AuthenticationService} from '../../../iam/_services';
+import {Router} from '@angular/router';
+import {User} from '../../../iam/_models';
 
 @Component({
     selector     : 'vertical-layout-1',
@@ -15,6 +18,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy
 {
     fuseConfig: any;
     navigation: any;
+    public user: User;
+    public isAuthenticated: boolean;
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -23,9 +28,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy
      * Constructor
      *
      * @param {FuseConfigService} _fuseConfigService
+     * @param authService
+     * @param router
      */
     constructor(
-        private _fuseConfigService: FuseConfigService
+        private _fuseConfigService: FuseConfigService,
+        private authService: AuthenticationService,
+        private router: Router
     )
     {
         // Set the defaults
@@ -33,6 +42,15 @@ export class VerticalLayout1Component implements OnInit, OnDestroy
 
         // Set the private defaults
         this._unsubscribeAll = new Subject();
+
+        router.events.subscribe((value => {
+            console.log(value);
+            this.isAuthenticated = this.authService.isAuthenticated();
+            if (this.isAuthenticated){
+                this.user = this.authService.getUser();
+            }
+        }));
+
     }
 
     // -----------------------------------------------------------------------------------------------------

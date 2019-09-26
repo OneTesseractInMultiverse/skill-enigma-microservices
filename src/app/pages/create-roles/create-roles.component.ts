@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Router } from "@angular/router"
 import { RoleService } from 'app/services/role.service';
 
 @Component({
@@ -8,30 +8,33 @@ import { RoleService } from 'app/services/role.service';
   styleUrls: ['./create-roles.component.scss']
 })
 export class CreateRolesComponent implements OnInit {
-  myForm: FormGroup;
-  constructor(private fb: FormBuilder, private roleService: RoleService) { }
+  buttonLabel: string = 'Submit';
+  constructor(private roleService: RoleService, private router: Router) { }
 
   ngOnInit() {
-    this.myForm = this.fb.group({
-      name: ['', Validators.required],
-      description: ['', Validators.required],
-      area: ['', Validators.required],
-      unit: ['', Validators.required]
-  });
+
+  }
+
+  react(roleObj: object) {
+    this.submit(roleObj);
   }
 
   
-  onSubmit(rolesObj) {
-    this.roleService.saveRole(rolesObj).subscribe(
+  submit(roleObj:object) {
+    this.roleService.saveRole(roleObj).subscribe(
       res => {
-          console.log(res);
           alert('New role Inserted');
+          this.router.navigate(['/roles-management/roles'])
       }, error => {
           // ERROR
           console.error(error);
           alert('Unable to insert new role');
       });
 
+
+  }
+  parseBool(val: object) {
+    return JSON.parse(String(val).toLowerCase());
   }
 
 
