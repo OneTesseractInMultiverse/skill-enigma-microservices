@@ -1,1 +1,25 @@
-<p>landing works!</p>
+<div id="background"></div>
+
+<div id="landing-page" fxLayout fxLayoutAlign="center start">
+
+    <!-- LANDING PAGE START  -->
+    <div id="content-container"class="mt-112">
+
+        <!-- TITLE -->
+        <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}">
+            <!-- Front -->
+            <div class="fuse-widget-front p-24 mat-elevation-z5" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="18px">
+                <img src="../../../assets/images/logos/logo-cloud-cr.png" alt="ibm cloud logo" class="w-120">
+                <span class="mat-display-3 cyan-font m-0">Integrated Cloud Portal</span>
+            </div>
+        </fuse-widget>
+
+        <div fxLayout="column" fxLayout.gt-xs="row">
+            <app-announcements fxFlex="1 0 0"></app-announcements>
+            <app-quick-panel fxFlex="1 0 0"></app-quick-panel>
+        </div>
+
+    </div>
+    <!-- LANDING PAGE ENDS -->
+
+</div>
