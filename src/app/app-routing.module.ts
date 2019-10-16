@@ -16,6 +16,11 @@ const APP_ROUTES: Routes = [
         canActivate: [AuthGuard]
     },
     {
+        path: 'skill-management',
+        loadChildren: () => import('./pages/skill-dashboard/skill-dashboard.module').then(mod => mod.SkillDashboardModule),
+        canActivate: [AuthGuard]
+    },
+    {
         path: 'skill-management/skills',
         loadChildren: () => import('./pages/list-skills/list-skills.module').then(mod => mod.ListSkillsModule),
         canActivate: [AuthGuard]

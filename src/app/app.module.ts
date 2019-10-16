@@ -26,11 +26,9 @@ import {TmsComponent} from './main/home/components/tms/tms.component';
 import {HelpNeededComponent} from './main/home/components/help-needed/help-needed.component';
 import {ManagementItemTableComponent} from './main/home/components/management-item-table/management-item-table.component';
 import {AppRoutingModule} from './app-routing.module';
-import {LandingComponent} from './pages/landing/landing.component';
 import {ErrorInterceptor} from './iam/_helpers/error.interceptor';
 import {JwtInterceptor} from './iam/_helpers/jwt.interceptor';
 import {IamModule} from './iam/iam.module';
-
 
 @NgModule({
     declarations: [
