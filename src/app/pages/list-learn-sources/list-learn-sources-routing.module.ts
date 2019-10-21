@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {ListEmployeesComponent} from './list-employees.component';
 import {CommonModule} from '@angular/common';
+import {ListLearnSourcesComponent} from './list-learn-sources.component';
 
 
 const routes: Routes = [
     {
         path: '**',
-        component: ListEmployeesComponent
+        component: ListLearnSourcesComponent
     }
 ];
 
@@ -18,5 +18,5 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class ListEmployeesRoutingModule {
+export class ListLearnSourcesRoutingModule {
 }

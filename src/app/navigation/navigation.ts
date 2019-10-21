@@ -25,7 +25,7 @@ export const navigation: FuseNavigation[] = [
         children : [
             {
                 id       : 'role',
-                title    : 'ROLES',
+                title    : 'Roles',
                 translate: 'NAV.ROLE_ITEMS.ROLES',
                 type     : 'item',
                 icon     : 'trending_up',
@@ -61,7 +61,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.SKILL_ITEMS.SOURCES',
                 type     : 'item',
                 icon     : 'timelapse',
-                url      : '/skill-management/sources'
+                url      : 'skill-management/knowledge-source'
             }
         ]
     },
