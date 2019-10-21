@@ -10,6 +10,7 @@ import {LandingComponent} from './landing.component';
 import {FuseWidgetModule} from '../../../@fuse/components';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import {QuickPanelComponent} from './quick-panel/quick-panel.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import {QuickPanelComponent} from './quick-panel/quick-panel.component';
         //  FUSE MODULE
         FuseSharedModule,
         FuseWidgetModule,
+        FontAwesomeModule,
         // EXTERNAL LIBRARIES MODULE
         MaterialModule,
         NgxChartsModule,
