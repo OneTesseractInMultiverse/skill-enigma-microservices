@@ -31,6 +31,7 @@ import {JwtInterceptor} from './iam/_helpers/jwt.interceptor';
 import {IamModule} from './iam/iam.module';
 import {CreateLearnSourcesComponent} from './pages/create-learn-sources/create-learn-sources.component';
 import {LearningSourceFormComponent} from './components/learning-source-form/learning-source-form.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -58,9 +59,8 @@ import {LearningSourceFormComponent} from './components/learning-source-form/lea
         MatMomentDateModule,
 
         // Material
-
         MaterialModule,
-
+        FontAwesomeModule,
         // Fuse modules
         FuseModule.forRoot(fuseConfig),
         FuseProgressBarModule,

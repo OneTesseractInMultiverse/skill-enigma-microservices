@@ -11,6 +11,7 @@ import {FuseWidgetModule} from '../../../@fuse/components';
 import {AnnouncementsComponent} from './announcements/announcements.component';
 import {QuickPanelComponent} from './quick-panel/quick-panel.component';
 import {ParticlesModule} from 'angular-particle';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import {ParticlesModule} from 'angular-particle';
         //  FUSE MODULE
         FuseSharedModule,
         FuseWidgetModule,
+        FontAwesomeModule,
         // EXTERNAL LIBRARIES MODULE
         MaterialModule,
         NgxChartsModule,
