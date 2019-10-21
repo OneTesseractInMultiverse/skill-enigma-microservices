@@ -15,6 +15,16 @@ const APP_ROUTES: Routes = [
         loadChildren: () => import('./pages/list-employees/list-employees.module').then(mod => mod.ListEmployeesModule),
         canActivate: [AuthGuard]
     },
+    // {
+    //     path: 'skill-management',
+    //     loadChildren: () => import('./pages/skill-dashboard/skill-dashboard.module').then(mod => mod.SkillDashboardModule),
+    //     canActivate: [AuthGuard]
+    // },
+    {
+        path: 'skill-management/knowledge-source',
+        loadChildren: () => import('./pages/list-learn-sources/list-learn-sources.module').then(mod => mod.ListLearnSourcesModule),
+        canActivate: [AuthGuard]
+    },
     {
         path: 'skill-management/skills',
         loadChildren: () => import('./pages/list-skills/list-skills.module').then(mod => mod.ListSkillsModule),

@@ -8,8 +8,9 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {LandingComponent} from './landing.component';
 import {FuseWidgetModule} from '../../../@fuse/components';
-import { AnnouncementsComponent } from './announcements/announcements.component';
+import {AnnouncementsComponent} from './announcements/announcements.component';
 import {QuickPanelComponent} from './quick-panel/quick-panel.component';
+import {ParticlesModule} from 'angular-particle';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -21,6 +22,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     imports: [
         CommonModule,
         LandingRoutingModule,
+        ParticlesModule,
         //  FUSE MODULE
         FuseSharedModule,
         FuseWidgetModule,

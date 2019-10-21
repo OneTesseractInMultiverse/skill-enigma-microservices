@@ -1,0 +1,85 @@
+<div class="page-layout blank p-24" fusePerfectScrollbar>
+    <!-- HEADER -->
+    <div class="header accent p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row"
+         fxLayoutAlign.gt-xs="space-between center">
+        <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="secondary-text s-18">people</mat-icon>
+                <mat-icon class="secondary-text s-16">chevron_right</mat-icon>
+                <span class="secondary-text">Skill Management</span>
+                <mat-icon class="secondary-text s-16">chevron_right</mat-icon>
+                <span class="secondary-text">Dashboard</span>
+            </div>
+            <div class="h2 mt-16">Skill Management Dashboard</div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+<!--    <mat-card>-->
+<!--        <div class="mat-elevation-z8">-->
+<!--            &lt;!&ndash; TODO CONTENT HERE &ndash;&gt;-->
+<!--        </div>-->
+<!--    </mat-card>-->
+
+    <div class="content">
+        <div class="left mr-lg-32">
+
+            <div fxLayout="column" fxLayoutAlign="start"
+                 fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="start start">
+
+
+
+
+
+                <!-- Widget 2 -->
+                <div class="widget" fxFlex="100" fxFlex.gt-sm="33">
+
+                    <div class="fuse-card auto-width mb-32" [ngClass.gt-sm]="'mb-0 mr-32'">
+
+                        <div class="p-16 pb-0" fxLayout="row wrap" fxLayoutAlign="start end">
+
+                            <div class="pr-16">
+                                <div class="h3 secondary-text">Total Employees</div>
+                                <div class="font-size-54 font-weight-300 line-height-1 mt-8">
+                                    {{widgets.employees.count}}
+                                </div>
+                            </div>
+
+<!--                            <div class="py-4 font-size-16" fxLayout="row" fxLayoutAlign="start center">-->
+<!--                                <div fxFlex="row" fxLayoutAlign="start center" class="green-fg" *ngIf="widgets.widget2.conversion.ofTarget > 0">-->
+<!--                                    <mat-icon class="green-fg mr-4">trending_up</mat-icon>-->
+<!--                                    <span>{{widgets.widget2.conversion.ofTarget}}%</span>-->
+<!--                                </div>-->
+<!--                                <div fxFlex="row" fxLayoutAlign="start center" class="red-fg" *ngIf="widgets.widget2.conversion.ofTarget < 0">-->
+<!--                                    <mat-icon class="red-fg mr-4">trending_down</mat-icon>-->
+<!--                                    <span>{{widgets.widget2.conversion.ofTarget}}%</span>-->
+<!--                                </div>-->
+<!--                                <div class="ml-4 text-nowrap">of target</div>-->
+<!--                            </div>-->
+
+                        </div>
+
+<!--                        <div class="h-96 w-100-p">-->
+<!--                            <canvas baseChart-->
+<!--                                    [datasets]="widgets.widget2.datasets"-->
+<!--                                    [labels]="widgets.widget2.labels"-->
+<!--                                    [colors]="widgets.widget2.colors"-->
+<!--                                    [options]="widgets.widget2.options"-->
+<!--                                    [chartType]="widgets.widget2.chartType">-->
+<!--                            </canvas>-->
+<!--                        </div>-->
+
+                    </div>
+
+                </div>
+                <!-- / Widget 2 -->
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

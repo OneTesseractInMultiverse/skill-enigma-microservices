@@ -29,8 +29,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {ErrorInterceptor} from './iam/_helpers/error.interceptor';
 import {JwtInterceptor} from './iam/_helpers/jwt.interceptor';
 import {IamModule} from './iam/iam.module';
+import {CreateLearnSourcesComponent} from './pages/create-learn-sources/create-learn-sources.component';
+import {LearningSourceFormComponent} from './components/learning-source-form/learning-source-form.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-
 
 @NgModule({
     declarations: [
@@ -42,7 +43,9 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
         LowlightsComponent,
         TmsComponent,
         HelpNeededComponent,
-        ManagementItemTableComponent
+        ManagementItemTableComponent,
+        CreateLearnSourcesComponent,
+        LearningSourceFormComponent
     ],
     imports: [
         IamModule,
@@ -72,8 +75,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
         AppRoutingModule
     ],
     providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+        {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
     ],
     bootstrap: [
         AppComponent
