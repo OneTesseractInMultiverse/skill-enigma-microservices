@@ -8,6 +8,7 @@ import { CallbackComponent } from './_components/callback/callback.component';
 import { LogoutComponent } from './_components/logout/logout.component';
 import { LoginComponent } from './_components/login/login.component';
 import { LoginMessageComponent } from './_components/login-message/login-message.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { LoginMessageComponent } from './_components/login-message/login-message
         //  FUSE MODULE
         FuseSharedModule,
         // EXTERNAL LIBRARIES MODULE
-        MaterialModule
+        MaterialModule,
+        BrowserAnimationsModule
     ],
     exports: [
         FuseSharedModule

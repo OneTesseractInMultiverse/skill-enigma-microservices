@@ -9,7 +9,7 @@ export const environment = {
     api: 'https://icp-skills.appsecurity.info/skill_management',
     apiVersion: 'v1',
     authorization_server: 'https://nexo-auth.mybluemix.net/application',
-    application_id: 'f20063b3-985b-470b-84e6-7794a4581b09',
+    application_id: '4a64fbaf-2f25-4d20-beeb-9147a28b8f2c', // CF
     authorization_endpoint: 'sso'
 };
 

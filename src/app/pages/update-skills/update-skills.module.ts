@@ -7,6 +7,7 @@ import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {UpdateSkillsComponent} from './update-skills.component';
 import {SkillDeclarationModule} from '../declarations/skill-declaration.module'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({

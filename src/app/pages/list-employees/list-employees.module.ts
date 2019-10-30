@@ -7,6 +7,7 @@ import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {ListEmployeesComponent} from './list-employees.component';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({

@@ -12,6 +12,7 @@ import {AnnouncementsComponent} from './announcements/announcements.component';
 import {QuickPanelComponent} from './quick-panel/quick-panel.component';
 import {ParticlesModule} from 'angular-particle';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [

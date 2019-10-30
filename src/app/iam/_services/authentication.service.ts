@@ -107,6 +107,8 @@ export class AuthenticationService {
     redirectAfterLogin(): void {
         if (localStorage.getItem('afterLoginView') && localStorage.getItem('afterLoginView') !== '') {
             this.router.navigate([localStorage.getItem('afterLoginView')]);
+            // console.log('===============================================');
+            // console.log(localStorage.getItem('afterLoginView'));
         } else {
             this.router.navigate(['landing']);
         }

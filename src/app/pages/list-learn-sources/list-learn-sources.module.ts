@@ -6,6 +6,7 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {ListLearnSourcesComponent} from './list-learn-sources.component';
 import {ListLearnSourcesRoutingModule} from './list-learn-sources-routing.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({

@@ -13,6 +13,7 @@ import {SkillComponent} from './skills-panel/skills-area/skill/skill.component';
 import {SkillComponentComponent} from './skills-panel/skills-area/skill/skill-component/skill-component.component';
 import {ContactItemComponent} from './header/contact-item/contact-item.component';
 import { BiographyComponent } from './biography/biography.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [

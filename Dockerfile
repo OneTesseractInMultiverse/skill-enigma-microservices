@@ -6,7 +6,7 @@ RUN npm install
 COPY ./ /app/
 ARG configuration=prod
 RUN npm install -g @angular/cli
-RUN ng build
+RUN ng build --prod=true
 
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
 FROM nginx:1.15

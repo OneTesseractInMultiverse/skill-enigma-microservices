@@ -7,6 +7,7 @@ import {MaterialModule} from '../../modules/material/material.module';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {CreateRolesComponent} from './create-roles.component';
 import { RoleDeclarationModule } from '../declarations/role-declaration.module'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
