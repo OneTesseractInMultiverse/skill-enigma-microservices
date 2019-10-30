@@ -1,1 +1,40 @@
-<p>learning-source-form works!</p>
+<mat-card>
+    <div class="form">
+        <form [formGroup]="learningSourceForm">
+            <div>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="type-name" placeholder="Name">
+                    <mat-hint>Required</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <textarea formControlName="description" matInput placeholder="Description"></textarea>
+                    <mat-hint>Required</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Difficulty</mat-label>
+                    <input matInput formControlName="difficulty" placeholder="Difficulty">
+                    <mat-hint>Required</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Url</mat-label>
+                    <input matInput formControlName="resource_url" placeholder="Url">
+                    <mat-hint>Required</mat-hint>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button type="button" [disabled]="!learningSourceForm.valid"
+                        (click)="onButtonClicked(learningSourceForm.value)">{{buttonLabel}}</button>
+                <div class="divider"></div>
+                <button mat-raised-button type="button" (click)="onBack()">BACK</button>
+            </div>
+        </form>
+    </div>
+</mat-card>

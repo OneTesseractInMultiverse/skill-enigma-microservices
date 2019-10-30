@@ -18,18 +18,26 @@ export const navigation: FuseNavigation[] = [
         ]
     },
     {
-        id       : 'role-management',
-        title    : 'Role Management',
+        id       : 'learningSource-management',
+        title    : 'Org Management',
         translate: 'NAV.ROLE',
         type     : 'group',
         children : [
             {
-                id       : 'role',
+                id       : 'learningSource',
                 title    : 'Roles',
                 translate: 'NAV.ROLE_ITEMS.ROLES',
                 type     : 'item',
                 icon     : 'trending_up',
-                url      : '/roles-management/roles'
+                url      : '/learningSource/list'
+            },
+            {
+                id       : 'employee-skills',
+                title    : 'Employees',
+                translate: 'NAV.SKILL_ITEMS.EMPLOYEE',
+                type     : 'item',
+                icon     : 'people',
+                url      : '/employee/list'
             }
         ]
     },
@@ -45,15 +53,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.SKILL_ITEMS.SKILLS',
                 type     : 'item',
                 icon     : 'trending_up',
-                url      : '/skill-management/skills'
-            },
-            {
-                id       : 'employee-skills',
-                title    : 'Employees',
-                translate: 'NAV.SKILL_ITEMS.EMPLOYEE',
-                type     : 'item',
-                icon     : 'people',
-                url      : '/skill-management/employees'
+                url      : '/skill/list'
             },
             {
                 id       : 'skill-sources',
@@ -61,7 +61,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.SKILL_ITEMS.SOURCES',
                 type     : 'item',
                 icon     : 'timelapse',
-                url      : 'skill-management/knowledge-source'
+                url      : '/knowledge-source/list'
             }
         ]
     },

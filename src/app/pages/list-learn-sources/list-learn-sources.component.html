@@ -16,6 +16,7 @@
     <!-- / HEADER -->
 
     <mat-card>
+        <button mat-button color="accent" routerLink="/learning-source/create">Add New Learning Source</button>
         <mat-form-field>
             <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
         </mat-form-field>

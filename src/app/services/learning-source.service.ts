@@ -42,4 +42,19 @@ export class LearningSourceService {
             map((res: LearningSource[]) => res)
         );
     } // GET EMPLOYEES ENDS -----------------------------------------------------------
+
+    // ------------------------------------------------------------------------------------
+    // POST NEW learningSource
+    // ------------------------------------------------------------------------------------
+    /**
+     *
+     * @param learningSource
+     */
+    saveLearningSource(learningSource: object){
+        return this.http.post(this.URL, learningSource).pipe(
+            map((res: Response) => {
+                return res;
+            } )
+        );
+    }
 }
