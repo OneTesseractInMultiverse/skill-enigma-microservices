@@ -61,7 +61,6 @@ export class ToolbarComponent implements OnInit, OnDestroy
         this._unsubscribeAll = new Subject();
 
         router.events.subscribe((value => {
-            console.log(value);
             this.isAuthenticated = this.authService.isAuthenticated();
             if (this.isAuthenticated){
                 this.user = this.authService.getUser();

@@ -53,6 +53,6 @@ export class RoleFormComponent implements OnInit {
     }
 
     onBack() {
-        this.router.navigate(['/role/list']);
+        this.router.navigate(['/roles']);
     }
 }

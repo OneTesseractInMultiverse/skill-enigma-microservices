@@ -3,7 +3,7 @@ import { FuseNavigation } from '@fuse/types';
 export const navigation: FuseNavigation[] = [
     {
         id       : 'overview',
-        title    : 'Overview',
+        title    : 'General',
         translate: 'NAV.OVERVIEW',
         type     : 'group',
         children : [
@@ -18,26 +18,26 @@ export const navigation: FuseNavigation[] = [
         ]
     },
     {
-        id       : 'learningSource-management',
-        title    : 'Org Management',
+        id       : 'org-nav',
+        title    : 'Organization',
         translate: 'NAV.ROLE',
         type     : 'group',
         children : [
             {
-                id       : 'learningSource',
+                id       : 'roles-id',
                 title    : 'Roles',
                 translate: 'NAV.ROLE_ITEMS.ROLES',
                 type     : 'item',
-                icon     : 'trending_up',
-                url      : '/learningSource/list'
+                icon     : 'recent_actors',
+                url      : 'roles'
             },
             {
-                id       : 'employee-skills',
+                id       : 'employees-id',
                 title    : 'Employees',
                 translate: 'NAV.SKILL_ITEMS.EMPLOYEE',
                 type     : 'item',
                 icon     : 'people',
-                url      : '/employee/list'
+                url      : '/employees'
             }
         ]
     },
@@ -53,7 +53,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.SKILL_ITEMS.SKILLS',
                 type     : 'item',
                 icon     : 'trending_up',
-                url      : '/skill/list'
+                url      : '/skills'
             },
             {
                 id       : 'skill-sources',

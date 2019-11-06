@@ -11,7 +11,7 @@ const APP_ROUTES: Routes = [
         canActivate: [AuthGuard]
     },
     {
-        path: 'employee/list',
+        path: 'employees',
         loadChildren: () => import('./pages/list-employees/list-employees.module').then(mod => mod.ListEmployeesModule),
         canActivate: [AuthGuard]
     },
@@ -31,12 +31,13 @@ const APP_ROUTES: Routes = [
         canActivate: [AuthGuard]
     },
     {
-        path: 'skill/list',
+        path: 'skills',
         loadChildren: () => import('./pages/list-skills/list-skills.module').then(mod => mod.ListSkillsModule),
         canActivate: [AuthGuard]
     },
     {
         path: 'skill/create',
+        pathMatch: 'full',
         loadChildren: () => import('./pages/create-skills/create-skills.module').then(mod => mod.CreateSkillsModule),
         canActivate: [AuthGuard]
     },
@@ -46,17 +47,20 @@ const APP_ROUTES: Routes = [
         canActivate: [AuthGuard]
     },
     {
-        path: 'learning-source/list',
+        path: 'roles',
+        pathMatch: 'full',
         loadChildren: () => import('./pages/list-roles/list-roles.module').then(mod => mod.ListRolesModule),
         canActivate: [AuthGuard]
     },
     {
-        path: 'learning-source/create',
+        path: 'roles/create',
+        pathMatch: 'full',
         loadChildren: () => import('./pages/create-roles/create-roles.module').then(mod => mod.CreateRolesModule),
         canActivate: [AuthGuard]
     },
     {
-        path: 'role/update/:role_id',
+        path: 'roles/update/:role_id',
+        pathMatch: 'full',
         loadChildren: () => import('./pages/update-roles/update-roles.module').then(mod => mod.UpdateRolesModule),
         canActivate: [AuthGuard]
     },

@@ -44,4 +44,16 @@ export class EmployeeService {
         );
     } // GET EMPLOYEES ENDS -----------------------------------------------------------
 
+    // -------------------------------------------------------------------------------
+    // POSTS AN EMPLOYEE DEFINITION
+    // -------------------------------------------------------------------------------
+    /**
+     * Gets the list of employees
+     */
+    saveEmployee(employee: Employee){
+        return this.http.post(this.URL, employee).pipe(
+            map((res: Employee) => res)
+        );
+    }
+
 } // SERVICES END

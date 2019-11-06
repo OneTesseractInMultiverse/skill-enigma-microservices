@@ -8,25 +8,26 @@ import {RoleService} from 'app/services/role.service';
     styleUrls: ['./create-roles.component.scss']
 })
 export class CreateRolesComponent implements OnInit {
-    buttonLabel: string = 'Submit';
+
+    buttonLabel = 'Submit';
 
     constructor(private roleService: RoleService, private router: Router) {
     }
 
-    ngOnInit() {
+    ngOnInit(): void{
 
     }
 
-    react(roleObj: object) {
+    react(roleObj: object): void {
         this.submit(roleObj);
     }
 
 
-    submit(roleObj: object) {
+    submit(roleObj: object): void {
         this.roleService.saveRole(roleObj).subscribe(
             res => {
                 alert('New Role Inserted');
-                this.router.navigate(['/roles/list']);
+                this.router.navigate(['/roles']);
             }, error => {
                 // ERROR
                 console.error(error);

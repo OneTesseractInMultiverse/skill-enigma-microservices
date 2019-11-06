@@ -52,7 +52,7 @@ export class RoleService {
    * @param role
    */
   saveRole(role:object){
-    return this.http.post(this.URL,role).pipe(
+    return this.http.post(this.URL, role).pipe(
         map((res: Response) => {
           return res;
         } )

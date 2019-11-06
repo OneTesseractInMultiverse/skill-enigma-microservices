@@ -14,14 +14,14 @@ export class UpdateRolesComponent implements OnInit {
 
   ROLE: Role = { id: '?', name: '?', description: '?', unit: '?', area: '?' };
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.setRole();
   }
-  buttonLabel: string = 'Update';
+  buttonLabel = 'Update';
   setRole() {
-    const role_id: string = this.route.snapshot.paramMap.get('role_id');
+    const roleId: string = this.route.snapshot.paramMap.get('role_id');
     // SERVICE ENDPOINT
-    this.roleService.getRoleById(role_id).subscribe(
+    this.roleService.getRoleById(roleId).subscribe(
       value => {
         // RETURN THE SKILL
         this.ROLE = value;
@@ -41,7 +41,7 @@ export class UpdateRolesComponent implements OnInit {
     this.roleService.putRole(role_id, roleObj).subscribe(
       res => {
         alert('Role Updated');
-        this.router.navigate(['/roles-management/roles'])
+        this.router.navigate(['/roles']);
       }, error => {
         // ERROR
         alert('Unable to Update Role');
